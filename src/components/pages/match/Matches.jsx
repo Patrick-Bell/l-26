@@ -5,7 +5,7 @@ import {
   Search, Filter, MapPin 
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import { allMatches } from '../../api/matches';
+import { allMatches } from '../../api/Matches';
 
 
 const Matches = () => {
