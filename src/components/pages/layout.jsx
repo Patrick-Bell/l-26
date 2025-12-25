@@ -31,8 +31,7 @@ import RefereeLeaderboard from "./referee/RefereeStats"
 
 const Page = () => {
   const location = useLocation()
-  const [section, setSection] = useState("Dashboard")
-  const isLoginPage = location.pathname === "/"
+  const [section, setSection] = useState("Table")
 
 
   // Map routes to section names
