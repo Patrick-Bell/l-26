@@ -27,7 +27,7 @@ const Matches = () => {
         </div>
       </header>
 
-      <main className="mx-auto px-4 py-8 space-y-6">
+      <main className="mx-auto py-8 space-y-4">
         
         {matchData.map((match) => (
           <div key={match.id} className="bg-white rounded-[32px] border border-zinc-200 overflow-hidden transition-all">

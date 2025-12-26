@@ -109,7 +109,7 @@ const comparisonData = useMemo(() => {
   return (
     <div className="min-h-screen font-sans text-zinc-900 pb-16">
       {/* Compact Sticky Header */}
-      <nav className="bg-white/95 backdrop-blur-sm border-b border-zinc-200 z-50 px-3 py-2.5">
+      <nav className="bg-white/95 backdrop-blur-sm border-b border-zinc-200 z-50 px-3 py-2.5 sticky top-16">
         <div className="mx-auto flex items-center justify-between">
           <button onClick={() => navigate(-1)} className="p-1.5 hover:bg-zinc-100 rounded-full transition-colors">
             <ChevronLeft className="w-4 h-4" />

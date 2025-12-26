@@ -68,8 +68,8 @@ const Table = () => {
 
   return (
     <div className="min-h-screen pb-20">
-      <header className="bg-white border-b border-zinc-200 sticky top-0 z-40">
-        <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <header className="bg-white border-b border-zinc-200 sticky top-2 z-40">
+        <div className="mx-auto px-4 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <div className="p-2 bg-zinc-900 rounded-lg"><Trophy className="w-5 h-5 text-white" /></div>
             <div>
@@ -90,7 +90,7 @@ const Table = () => {
         </div>
       </header>
 
-      <main className="mx-auto px-2 sm:px-4 py-6 space-y-4">
+      <main className="mx-auto py-6 space-y-4">
     
       <div className='flex w-full items-center justify-between'>
         {/* Status Key */}
@@ -124,9 +124,9 @@ const Table = () => {
           <div className="overflow-x-auto scrollbar-hide">
             <table className="w-full border-collapse min-w-[850px] text-center">
               <thead>
-                <tr className="border-b border-zinc-100 bg-white">
+                <tr className="border-b border-zinc-100 bg-zinc-50">
                   <th className="px-4 py-4 text-[9px] font-black uppercase text-zinc-400 w-12">#</th>
-                  <th className="px-4 py-4 text-[9px] font-black uppercase text-zinc-400 text-left sticky left-0 bg-zinc-50/50 z-10">Player</th>
+                  <th className="px-4 py-4 text-[9px] font-black uppercase text-zinc-400 text-left sticky left-0 bg-zinc-50 z-30">Player</th>
                   <th className="px-2 py-4 text-[9px] font-black uppercase text-zinc-400">GP</th>
                   <th className="px-2 py-4 text-[9px] font-black uppercase text-emerald-600">W</th>
                   <th className="px-2 py-4 text-[9px] font-black uppercase text-zinc-500">D</th>

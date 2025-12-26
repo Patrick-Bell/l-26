@@ -55,7 +55,7 @@ const PlayerLeaderboard = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white text-zinc-900 font-sans p-4 pb-20 selection:bg-zinc-100">
+    <div className="min-h-screen bg-white text-zinc-900 font-sans pb-20 selection:bg-zinc-100">
       
       {/* HEADER */}
       <div className="flex items-center justify-between mb-6 border-b border-zinc-100 pb-4">

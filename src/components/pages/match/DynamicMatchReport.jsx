@@ -20,7 +20,7 @@ const DynamicMatchReport = () => {
     <div className="min-h-screen w-full text-[#121212] font-sans pb-10 antialiased">
       
       {/* HEADER */}
-      <nav className="bg-white border-b border-zinc-100 px-4 py-3 sticky top-0 z-50 flex items-center justify-between">
+      <nav className="bg-white border-b border-zinc-100 px-4 py-3 sticky top-16 z-50 flex items-center justify-between">
         <button onClick={() => navigate('/matches')} className="p-1"><ChevronLeft className="w-4 h-4" /></button>
         <div className="text-center">
           <h1 className="text-[10px] font-black uppercase tracking-tighter">Match Center</h1>
@@ -29,7 +29,7 @@ const DynamicMatchReport = () => {
         <div className="w-6" />
       </nav>
 
-      <main className="px-3 mt-4 space-y-4">
+      <main className="mt-4 space-y-4">
         {/* HERO SCORE CARD */}
         <div className="bg-[#121212] rounded-[32px] p-6 text-white flex items-center justify-between relative overflow-hidden">
           <div className="text-center w-20 text-[10px] font-black uppercase tracking-tight leading-tight">Home Team</div>
@@ -122,6 +122,10 @@ const DynamicMatchReport = () => {
                   <PlayerBadge pos="ST" name={match.team2[5]} light goal={match.goals.some(g => g.p === match.team2[5])} />
                 </div>
               </div>
+            </div>
+            <div className='flex items-center justify-between'>
+                <p className='text-[10px] font-black uppercase tracking-tighter'>Home Team</p>
+                <p className='text-[10px] font-black uppercase tracking-tighter'>Away Team</p>
             </div>
           </TabsContent>
         </Tabs>

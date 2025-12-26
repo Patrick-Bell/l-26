@@ -106,7 +106,7 @@ const StatsSection = ({ getMatchStats, getPredictedWinner, activeTab, teams, mat
                 </span>
 
                 {prediction.winner !== 'Draw' && (
-                  <span className="text-[9px] font-bold text-zinc-500 uppercase">
+                  <span className="hidden md:block text-[9px] font-bold text-zinc-500 uppercase">
                     +{prediction.confidence}% win rate
                   </span>
                     )}

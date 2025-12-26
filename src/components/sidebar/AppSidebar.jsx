@@ -8,6 +8,7 @@ import {
   Table,
   User,
   Users,
+  Users2,
   Volleyball,
 } from "lucide-react"
 
@@ -96,6 +97,11 @@ const AppSidebar = () => {
         name: "Referee",
         url: "/referee",
         icon: Hammer,
+      },
+      {
+        name: "Compare",
+        url: "/player-comparison",
+        icon: Users2,
       },
     ],
     account: [

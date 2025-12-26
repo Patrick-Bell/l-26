@@ -30,6 +30,8 @@ import RefereeLeaderboard from "./referee/RefereeStats"
 import Dashboard from "./dashboard/Dashboard"
 import logo from '../../assets/image.png'
 import PageNotFound from "./dashboard/PageNotFound"
+import PlayerComparison from "./compare/PlayerComparison"
+import Awards from "./awards/Awards"
 
 
 const Page = () => {
@@ -75,7 +77,7 @@ const Page = () => {
   }, [location.pathname])
 
   useEffect(() => {
-    document.title = `${section} | Lego League - 25/26`
+    document.title = `${section} | Lego League - 26`
   }, [section])
 
 
@@ -90,7 +92,7 @@ const Page = () => {
     <>
     <Helmet>
         <meta name="description" content={`View the ${section} section`} />
-        <title>{`${section} | Lego League 25/26`}</title>
+        <title>{`${section} | Lego League 2026`}</title>
         <link rel="icon" href={logo} />
       </Helmet>
 
@@ -108,7 +110,7 @@ const Page = () => {
             <Breadcrumb>
               <BreadcrumbList>
                 <BreadcrumbItem>
-                  <BreadcrumbLink href='/dashboard'>
+                  <BreadcrumbLink href='/'>
                     Lego League
                   </BreadcrumbLink>
                 </BreadcrumbItem>
@@ -139,6 +141,8 @@ const Page = () => {
               <Route path="/leaderboard" element={<PlayerLeaderboard />} />
               <Route path="/referee" element={<RefereeLeaderboard />} />
               <Route path="*" element={<PageNotFound />} />
+              <Route path="player-comparison" element={<PlayerComparison />} />
+              <Route path="/awards" element={<Awards />} />
           </Routes>
             
         </div>
