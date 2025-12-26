@@ -142,7 +142,7 @@ const TeamGenerator = () => {
             <div className="p-2 bg-zinc-900 rounded-lg"><Bot className="w-5 h-5 text-white" /></div>
             <div>
               <h1 className="text-lg font-black uppercase tracking-tighter italic">Team Generator</h1>
-              <p className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest leading-none">Season 25/26</p>
+              <p className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest leading-none">Season 26</p>
             </div>
           </div>
         </div>
@@ -188,7 +188,7 @@ const TeamGenerator = () => {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 py-6">
+      <div className="mx-auto py-6">
         {/* Main Content Area */}
         <div className="space-y-4">
           

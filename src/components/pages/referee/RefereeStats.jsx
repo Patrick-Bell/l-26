@@ -55,7 +55,7 @@ const RefereeLeaderboard = () => {
             <div className="p-2 bg-zinc-900 rounded-lg"><Hammer className="w-5 h-5 text-white" /></div>
             <div>
               <h1 className="text-lg font-black uppercase tracking-tighter italic">Match Officials</h1>
-              <p className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest leading-none">Season 25/26</p>
+              <p className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest leading-none">Season 26</p>
             </div>
           </div>
         <Scale className="w-5 h-5 text-zinc-300" />

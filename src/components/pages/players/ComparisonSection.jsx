@@ -56,8 +56,8 @@ const getPerformance = (stat) => {
     const playerValue = player?.monthlyData[0]?.[stat] || 0;
     const avgValue = parseFloat(getAverageStat(stat));
   
-    if (playerValue > avgValue) return "Above Average";
-    if (playerValue < avgValue) return "Below Average";
+    if (playerValue > avgValue) return "Above";
+    if (playerValue < avgValue) return "Below";
     return "Average";
   };
   
@@ -75,12 +75,12 @@ const getPerformance = (stat) => {
 <div className="grid grid-cols-3 gap-2">
 
 <div className="bg-white p-2.5 rounded-xl border border-zinc-100">
-    <p className="text-[7px] font-bold text-zinc-400 uppercase mb-0.5 truncate">{player.name} {stat}'s</p>
+    <p className="text-[7px] font-bold text-zinc-400 uppercase mb-0.5 truncate">{player.name} {stat}</p>
     <p className="text-sm font-black text-zinc-900">{playerValue}</p>
 </div>   
 
 <div className="bg-white p-2.5 rounded-xl border border-zinc-100">
-    <p className="text-[7px] font-bold text-zinc-400 uppercase mb-0.5 truncate">Average {stat}'s</p>
+    <p className="text-[7px] font-bold text-zinc-400 uppercase mb-0.5 truncate">Average {stat}</p>
     <p className="text-sm font-black text-zinc-900">{avgValue}</p>
 </div> 
 

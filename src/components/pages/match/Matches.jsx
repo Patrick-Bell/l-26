@@ -15,19 +15,15 @@ const Matches = () => {
   return (
     <div className="min-h-screen pb-20">
       {/* 1. HEADER (Consistent with Standings) */}
-      <header className="bg-white border-b border-zinc-200 z-40">
-        <div className="mx-auto px-4 py-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <header className="bg-white border-b border-zinc-200 sticky top-0 z-40">
+        <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-zinc-900 rounded-lg">
-              <Calendar className="w-5 h-5 text-white" />
-            </div>
+            <div className="p-2 bg-zinc-900 rounded-lg"><Calendar className="w-5 h-5 text-white" /></div>
             <div>
-              <h1 className="text-xl font-black uppercase tracking-tighter italic leading-none">Fixture Archive</h1>
-              <p className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest mt-1">Season 2024/25 Results</p>
+              <h1 className="text-lg font-black uppercase tracking-tighter italic">Fixtures</h1>
+              <p className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest leading-none">Season 26</p>
             </div>
           </div>
-
-          
         </div>
       </header>
 

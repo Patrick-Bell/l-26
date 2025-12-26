@@ -60,9 +60,9 @@ const Table = () => {
 
   const getRankBadge = (index) => {
     const pos = index + 1;
-    if (pos === 1) return 'bg-amber-400 text-amber-950 shadow-sm ring-1 ring-amber-500/50';
-    if (pos === 2) return 'bg-zinc-300 text-zinc-800 shadow-sm ring-1 ring-zinc-400/50';
-    if (pos === 3) return 'bg-orange-400 text-orange-950 shadow-sm ring-1 ring-orange-500/50';
+    if (pos === 1) return 'bg-amber-400 text-amber-950 ring-1 ring-amber-500/50';
+    if (pos === 2) return 'bg-zinc-300 text-zinc-800 ring-1 ring-zinc-400/50';
+    if (pos === 3) return 'bg-orange-400 text-orange-950 ring-1 ring-orange-500/50';
     return 'bg-zinc-100 text-zinc-500';
   };
 
@@ -74,7 +74,7 @@ const Table = () => {
             <div className="p-2 bg-zinc-900 rounded-lg"><Trophy className="w-5 h-5 text-white" /></div>
             <div>
               <h1 className="text-lg font-black uppercase tracking-tighter italic">League Standings</h1>
-              <p className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest leading-none">Season 24/25</p>
+              <p className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest leading-none">Season 26</p>
             </div>
           </div>
           <div className="flex-1 sm:flex-none flex items-center gap-2 bg-zinc-100 rounded-xl px-3 py-2 border border-zinc-200">
@@ -120,7 +120,7 @@ const Table = () => {
       </div>
 
 
-        <div className="bg-white rounded-md border border-zinc-200 shadow-sm overflow-hidden">
+        <div className="bg-white rounded-md border border-zinc-200 overflow-hidden">
           <div className="overflow-x-auto scrollbar-hide">
             <table className="w-full border-collapse min-w-[850px] text-center">
               <thead>
@@ -147,7 +147,7 @@ const Table = () => {
                     </td>
                     <td className="px-4 py-4 sticky left-0 z-10 text-left min-w-[180px] bg-white">
                       <div className="flex items-center gap-3 bg-white blur-10">
-                        <img src={player.image} className="w-10 h-12 object-cover rounded-lg shadow-sm bg-zinc-100" alt="" />
+                        <img src={player.image} className="w-10 h-12 object-cover rounded-lg bg-zinc-100" alt="" />
                         <div className="min-w-0">
                           <h3 className="text-xs font-black uppercase truncate leading-none mb-1">{player.name}</h3>
                           <div className="flex items-center gap-1.5">

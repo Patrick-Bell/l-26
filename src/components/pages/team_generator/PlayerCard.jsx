@@ -12,12 +12,9 @@ const PlayerCard = ({ player, position, revealed, teamColor }) => {
 
     return (
       <div 
-        className={`bg-white rounded-2xl p-2.5 border-2 transition-all duration-500 relative overflow-hidden h-full ${
-          revealed 
-            ? `${teamColor} border-opacity-100 scale-100 opacity-100` 
-            : 'border-zinc-200 scale-90 opacity-0'
-        }`}
-        style={{ transitionDelay: revealed ? '0ms' : '200ms' }}
+        className={`bg-white rounded-md p-2.5 border transition-all duration-500 relative overflow-hidden
+          h-full w-full ${revealed ? `${teamColor} border-opacity-100 opacity-100` : 'border-zinc-100 opacity-20'}`}
+        style={{ transitionDelay: revealed ? '0ms' : '500ms' }}
       >
         {player.suspended.isYellowSuspended && (
           <div className="absolute inset-0 bg-yellow-200 pointer-events-none rounded-2xl" />

@@ -27,11 +27,14 @@ import Matches from "./match/Matches"
 import DynamicMatchReport from "./match/DynamicMatchReport"
 import PlayerLeaderboard from "./leaderboard/Leaderboard"
 import RefereeLeaderboard from "./referee/RefereeStats"
+import Dashboard from "./dashboard/Dashboard"
+import logo from '../../assets/image.png'
+import PageNotFound from "./dashboard/PageNotFound"
 
 
 const Page = () => {
   const location = useLocation()
-  const [section, setSection] = useState("Table")
+  const [section, setSection] = useState("Dashboard")
 
 
   // Map routes to section names
@@ -39,7 +42,7 @@ const Page = () => {
     const path = location.pathname
 
     switch (true) {
-      case path === "/dashboard":
+      case path === "/":
         setSection("Dashboard")
         break
       case path === "/players":
@@ -67,7 +70,7 @@ const Page = () => {
         setSection("Leaderboards")
         break
       default:
-        setSection("Bandstand Merchandise Services")
+        setSection("Lego League")
     }
   }, [location.pathname])
 
@@ -88,6 +91,7 @@ const Page = () => {
     <Helmet>
         <meta name="description" content={`View the ${section} section`} />
         <title>{`${section} | Lego League 25/26`}</title>
+        <link rel="icon" href={logo} />
       </Helmet>
 
 
@@ -125,6 +129,7 @@ const Page = () => {
 
         <div className="flex-1 p-6 w-full">
           <Routes>
+              <Route path="/" element={<Dashboard />} />
               <Route path="/players" element={<PlayersPage />} />
               <Route path="/players/:id" element={<DynamicPlayersPage />} />
               <Route path="/team-generator" element={<TeamGenerator />} />
@@ -133,6 +138,7 @@ const Page = () => {
               <Route path="/matches/:id" element={<DynamicMatchReport />} />
               <Route path="/leaderboard" element={<PlayerLeaderboard />} />
               <Route path="/referee" element={<RefereeLeaderboard />} />
+              <Route path="*" element={<PageNotFound />} />
           </Routes>
             
         </div>

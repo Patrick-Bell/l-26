@@ -19,7 +19,7 @@ const PlayersPage = () => {
 
   const navigate = useNavigate()
 
-  const positions = ['ALL', 'GK', 'DEF', 'MID', 'ST'];
+  const positions = ['ALL', 'GK', 'DEF', 'MID', 'LM', 'RM', 'ST'];
 
   const filteredPlayers = useMemo(() => {
     return allPlayers.filter(player => 
@@ -39,16 +39,16 @@ const PlayersPage = () => {
     <div className="min-h-screen text-zinc-900 pb-24 font-sans">
       {/* HEADER */}
       <header className="sticky top-0 z-30 bg-white/90 backdrop-blur-md border-b border-zinc-200 px-4 py-4">
-        <div className="max-w-screen-xl mx-auto flex flex-col gap-4">
-          <div className="flex justify-between items-center">
+        <div className="mx-auto flex flex-col gap-4">
+          <div className="block md:flex justify-between items-center">
           <div className="flex items-center gap-3">
             <div className="p-2 bg-zinc-900 rounded-lg"><Trophy className="w-5 h-5 text-white" /></div>
             <div>
               <h1 className="text-lg font-black uppercase tracking-tighter italic">Players</h1>
-              <p className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest leading-none">Season 25/26</p>
+              <p className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest leading-none">Season 26</p>
             </div>
           </div>            
-          <div className="flex gap-1.5 overflow-x-auto scrollbar-hide">
+          <div className="flex gap-1.5 overflow-x-auto scrollbar-hide mt-4 md:mt-0">
               {positions.map(pos => (
                 <button
                   key={pos}

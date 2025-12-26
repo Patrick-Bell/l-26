@@ -1,6 +1,7 @@
 "use client"
 import React, { useEffect, useState } from "react"
 import {
+  Bot,
   Frame,
   Hammer,
   LayoutDashboard,
@@ -72,9 +73,14 @@ const AppSidebar = () => {
     ],
     projects: [
       {
+        name: "Dashboard",
+        url: "/",
+        icon: LayoutDashboard,
+      },
+      {
         name: "Generator",
         url: "/team-generator",
-        icon: LayoutDashboard,
+        icon: Bot,
       },
       {
         name: "Leaderboard",
