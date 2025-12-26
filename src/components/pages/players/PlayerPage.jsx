@@ -68,7 +68,7 @@ const PlayersPage = () => {
       </header>
 
       {/* GRID (Existing Card Design) */}
-      <main className="p-3 grid grid-cols-2 xs:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 mx-auto">
+      <main className="py-3 grid grid-cols-2 xs:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 mx-auto">
         {filteredPlayers.map((player) => (
          <div 
          key={player.id}

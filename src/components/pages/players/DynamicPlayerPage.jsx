@@ -122,7 +122,7 @@ const comparisonData = useMemo(() => {
         </div>
       </nav>
 
-      <main className="mx-auto px-3 mt-4 space-y-4">
+      <main className="mx-auto py-3 mt-4 space-y-4">
         
         {/* Compact Hero Section */}
         <div className="bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 rounded-3xl p-4 text-white relative overflow-hidden">
