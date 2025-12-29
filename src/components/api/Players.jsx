@@ -480,7 +480,7 @@ export const allPlayers = [
         "isInjured": false,
         "date_return": ''
       },
-      "form": ["D", "L", "D", "L", "W", "W", "L", "W", "D", "D", "D", "D", "L", 'D', 'W', 'D', 'W', 'D', 'D', 'D', 'L', 'W', 'L', 'L', 'D', 'D', 'W', 'L', 'L'],
+      "form": ["D", "L", "D", "L", "W", "W", "L", "W", "D", "D", "D", "D", "L", 'D', 'W', 'D', 'W', 'D', 'D', 'D', 'L', 'W', 'L', 'L', 'D', 'D', 'W', 'L', 'L', 'L'],
       "potm": false,
       "monthlyData": [
         { "month": "overall", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
@@ -495,7 +495,7 @@ export const allPlayers = [
         { "month": "september", "appearances": 0, "wins": 1, "draws": 0, "losses": 2, "points": 0, "goals": 2, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 1, "motm": 0 },
         { "month": "october", "appearances": 0, "wins": 0, "draws": 2, "losses": 1, "points": 0, "goals": 1, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 1 },
         { "month": "november", "appearances": 0, "wins": 1, "draws": 0, "losses": 0, "points": 0, "goals": 2, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 1, "motm": 0 },
-        { "month": "december", "appearances": 0, "wins": 0, "draws": 0, "losses": 2, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 }
+        { "month": "december", "appearances": 0, "wins": 0, "draws": 0, "losses": 3, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 }
       ],
       "previousSeason": [
           {"position": 29, "appearances": 44, "wins": 16, "draws": 21, "losses": 7, "points": 69, "goals": 22, "assists": 5, "win_percentage": 36.36, "unbeaten_percentage": 84.09, "own_goals": 0, "slingers": 2, "penalties": 0, "hatricks": 0, "yellow_cards": 3, "red_cards": 0, "clean_sheets": 16, "motm": 5,
@@ -525,7 +525,7 @@ export const allPlayers = [
         "isInjured": false,
         "date_return": ''
       },
-      "form": ["W", "D", "W", "D", "D", "W", "L", "L", "L", "D", "D", 'D', 'W', 'D', 'W', 'W', 'D', 'W', 'W', 'D', 'W', 'W', 'D', 'W', 'L', 'W', 'L', "D", 'W', 'D'],
+      "form": ["W", "D", "W", "D", "D", "W", "L", "L", "L", "D", "D", 'D', 'W', 'D', 'W', 'W', 'D', 'W', 'W', 'D', 'W', 'W', 'D', 'W', 'L', 'W', 'L', "D", 'W', 'D', 'W'],
       "potm": false,
       "monthlyData": [
         { "month": "overall", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
@@ -540,7 +540,7 @@ export const allPlayers = [
         { "month": "september", "appearances": 0, "wins": 1, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 1, "motm": 0 },
         { "month": "october", "appearances": 0, "wins": 2, "draws": 1, "losses": 1, "points": 0, "goals": 1, "assists": 2, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 2, "motm": 0 },
         { "month": "november", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
-        { "month": "december", "appearances": 0, "wins": 1, "draws": 2, "losses": 1, "points": 0, "goals": 0, "assists": 1, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 3, "motm": 0 }
+        { "month": "december", "appearances": 0, "wins": 2, "draws": 2, "losses": 1, "points": 0, "goals": 0, "assists": 1, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 4, "motm": 0 }
       ],
       "previousSeason": [
           {"position": 13, "appearances": 54, "wins": 23, "draws": 18, "losses": 13, "points": 87, "goals": 25, "assists": 12, "win_percentage": 42.59, "unbeaten_percentage": 75.93, "own_goals": 0, "slingers": 3, "penalties": 2, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 15, "motm": 8,
@@ -1023,7 +1023,7 @@ export const allPlayers = [
         "isInjured": false,
         "date_return": ''
       },
-      "form": ["D", "D", "W", "L", "D", "L", "D", "D", "D", "L", "L", "D", 'D', 'W', 'D', 'D', 'D', 'D', 'D', 'D', 'W', 'W', 'D', 'L', 'W', 'W'],
+      "form": ["D", "D", "W", "L", "D", "L", "D", "D", "D", "L", "L", "D", 'D', 'W', 'D', 'D', 'D', 'D', 'D', 'D', 'W', 'W', 'D', 'L', 'W', 'W', 'W'],
       "potm": false,
       "monthlyData": [
         { "month": "overall", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
@@ -1038,7 +1038,7 @@ export const allPlayers = [
         { "month": "september", "appearances": 0, "wins": 1, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 1, "motm": 0 },
         { "month": "october", "appearances": 0, "wins": 0, "draws": 1, "losses": 1, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
         { "month": "november", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
-        { "month": "december", "appearances": 0, "wins": 2, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 1, "motm": 0 }
+        { "month": "december", "appearances": 0, "wins": 3, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 2, "motm": 0 }
       ],
       "previousSeason": [
           {"position": 9, "appearances": 73, "wins": 22, "draws": 30, "losses": 21, "points": 96, "goals": 1, "assists": 2, "win_percentage": 28.00, "unbeaten_percentage": 70.67, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 3, "red_cards": 1, "clean_sheets": 22, "motm": 2,
@@ -1240,7 +1240,7 @@ export const allPlayers = [
         "isInjured": false,
         "date_return": ''
       },
-      "form": ["D", "D", "D", "D", "L", "D", "L", "W", "D", "L", "W", "D", "D", "W", "W", 'D', "W", 'D', 'W', "W", 'W', 'D', 'W', 'D', 'W', 'W', 'L', 'W', 'L', 'L', 'L', 'L', 'L', 'D', 'D', 'W', 'L', 'L'],
+      "form": ["D", "D", "D", "D", "L", "D", "L", "W", "D", "L", "W", "D", "D", "W", "W", 'D', "W", 'D', 'W', "W", 'W', 'D', 'W', 'D', 'W', 'W', 'L', 'W', 'L', 'L', 'L', 'L', 'L', 'D', 'D', 'W', 'L', 'L', 'L'],
       "potm": false,
       "monthlyData": [
         { "month": "overall", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
@@ -1255,7 +1255,7 @@ export const allPlayers = [
         { "month": "september", "appearances": 0, "wins": 1, "draws": 0, "losses": 3, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 1, "motm": 0 },
         { "month": "october", "appearances": 0, "wins": 0, "draws": 2, "losses": 2, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
         { "month": "november", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
-        { "month": "december", "appearances": 0, "wins": 1, "draws": 0, "losses": 2, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 1, "motm": 0 }
+        { "month": "december", "appearances": 0, "wins": 1, "draws": 0, "losses": 3, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 1, "motm": 0 }
       ],
       "previousSeason": [
           {"position": 6, "appearances": 71, "wins": 23, "draws": 32, "losses": 16, "points": 101, "goals": 0, "assists": 0, "win_percentage": 32.39, "unbeaten_percentage": 77.46, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 1, "red_cards": 0, "clean_sheets": 31, "motm": 7,
@@ -1503,7 +1503,7 @@ export const allPlayers = [
         "isInjured": false,
         "date_return": ''
       },
-      "form": ["L", "D", "L", "L", "L", "D", "D", "W", "D", "W", "D", "D", "W", "L", 'D', 'D', 'L', 'W', 'D', 'L', 'L', 'W', 'L', 'D', 'L', 'W', 'D', 'L', 'L'],
+      "form": ["L", "D", "L", "L", "L", "D", "D", "W", "D", "W", "D", "D", "W", "L", 'D', 'D', 'L', 'W', 'D', 'L', 'L', 'W', 'L', 'D', 'L', 'W', 'D', 'L', 'L', 'L'],
       "potm": false,
       "monthlyData": [
         { "month": "overall", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
@@ -1518,7 +1518,7 @@ export const allPlayers = [
         { "month": "september", "appearances": 0, "wins": 1, "draws": 0, "losses": 2, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 1, "red_cards": 0, "clean_sheets": 1, "motm": 0 },
         { "month": "october", "appearances": 0, "wins": 1, "draws": 1, "losses": 1, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
         { "month": "november", "appearances": 0, "wins": 0, "draws": 1, "losses": 1, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
-        { "month": "december", "appearances": 0, "wins": 0, "draws": 0, "losses": 1, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 }
+        { "month": "december", "appearances": 0, "wins": 0, "draws": 0, "losses": 2, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 }
       ],
       "previousSeason": [
           {"position": 43, "appearances": 42, "wins": 11, "draws": 20, "losses": 11, "points": 53, "goals": 3, "assists": 0, "win_percentage": 26.19, "unbeaten_percentage": 73.81, "own_goals": 0, "slingers": 1, "penalties": 0, "hatricks": 0, "yellow_cards": 17, "red_cards": 2, "clean_sheets": 12, "motm": 2,
@@ -1857,7 +1857,7 @@ export const allPlayers = [
         "isInjured": false,
         "date_return": ''
       },
-      "form": ["D", "D", "D", "D", "W", "D", "L", "D", "L", "D", "D", "L", "D", "W", 'D', 'D', 'W', 'D', 'D', 'D', 'D', 'D', 'D', 'L', 'L', 'L', 'L', 'L', 'L', 'D', 'L'],
+      "form": ["D", "D", "D", "D", "W", "D", "L", "D", "L", "D", "D", "L", "D", "W", 'D', 'D', 'W', 'D', 'D', 'D', 'D', 'D', 'D', 'L', 'L', 'L', 'L', 'L', 'L', 'D', 'L', 'W'],
       "potm": false,
       "monthlyData": [
         { "month": "overall", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
@@ -1872,7 +1872,7 @@ export const allPlayers = [
         { "month": "september", "appearances": 0, "wins": 0, "draws": 0, "losses": 2, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
         { "month": "october", "appearances": 0, "wins": 0, "draws": 1, "losses": 1, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 1, "clean_sheets": 0, "motm": 0 },
         { "month": "november", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
-        { "month": "december", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 }
+        { "month": "december", "appearances": 0, "wins": 1, "draws": 0, "losses": 0, "points": 0, "goals": 1, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 1, "motm": 0 }
       ],
       "previousSeason": [
           {"position": 0, "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0,
@@ -1889,7 +1889,7 @@ export const allPlayers = [
         "data:image/jpeg;base64,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"
       ],
       "suspended": {
-        "isYellowSuspended": false,
+        "isYellowSuspended": true,
         "yellowGamesSuspended": 0,
         "isRedSuspended": false,
         "redGamesSuspended": 0
@@ -1902,7 +1902,7 @@ export const allPlayers = [
         "isInjured": false,
         "date_return": ''
       },
-      "form": ["D", "D", "L", "W", "D", "W", "L", 'D', 'D', 'D', 'W', 'D', 'L', 'W', 'W', "D", "W", "D", "L", 'W', "D", 'D', 'D', 'L', 'L', 'D', 'L', 'W', 'W', 'L', 'D', 'L', 'L', 'D', 'L', 'D', 'D', 'L', 'W', 'W', 'W', 'D', 'L'],
+      "form": ["D", "D", "L", "W", "D", "W", "L", 'D', 'D', 'D', 'W', 'D', 'L', 'W', 'W', "D", "W", "D", "L", 'W', "D", 'D', 'D', 'L', 'L', 'D', 'L', 'W', 'W', 'L', 'D', 'L', 'L', 'D', 'L', 'D', 'D', 'L', 'W', 'W', 'W', 'D', 'L', 'W'],
       "potm": false,
       "monthlyData": [
         { "month": "overall", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
@@ -1917,7 +1917,7 @@ export const allPlayers = [
         { "month": "september", "appearances": 0, "wins": 0, "draws": 1, "losses": 2, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
         { "month": "october", "appearances": 0, "wins": 1, "draws": 1, "losses": 2, "points": 0, "goals": 1, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 1, "penalties": 0, "hatricks": 0, "yellow_cards": 1, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
         { "month": "november", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
-        { "month": "december", "appearances": 0, "wins": 2, "draws": 1, "losses": 1, "points": 0, "goals": 1, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 3, "motm": 0 }
+        { "month": "december", "appearances": 0, "wins": 3, "draws": 1, "losses": 1, "points": 0, "goals": 2, "assists": 1, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 1, "red_cards": 0, "clean_sheets": 4, "motm": 1 }
       ],
       "previousSeason": [
           {"position": 0, "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0,
@@ -2670,7 +2670,7 @@ export const allPlayers = [
         "isInjured": false,
         "date_return": ''
       },
-      "form": ["D", "D", "D", "D", "D", "D", "D", "D", 'W', "D", "W", "L", 'D', 'D', 'L', 'D', 'D', 'D', 'L', 'D', 'L', 'D', 'W', 'D', 'D', 'D', 'W', 'L', 'W', 'L', 'D', 'D', 'W', 'D', 'W'],
+      "form": ["D", "D", "D", "D", "D", "D", "D", "D", 'W', "D", "W", "L", 'D', 'D', 'L', 'D', 'D', 'D', 'L', 'D', 'L', 'D', 'W', 'D', 'D', 'D', 'W', 'L', 'W', 'L', 'D', 'D', 'W', 'D', 'W', 'W'],
       "potm": false,
       "monthlyData": [
         { "month": "overall", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
@@ -2685,7 +2685,7 @@ export const allPlayers = [
         { "month": "september", "appearances": 0, "wins": 0, "draws": 2, "losses": 1, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 1, "motm": 0 },
         { "month": "october", "appearances": 0, "wins": 1, "draws": 1, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 2, "motm": 0 },
         { "month": "november", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
-        { "month": "december", "appearances": 0, "wins": 1, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 1, "motm": 0 }
+        { "month": "december", "appearances": 0, "wins": 2, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 1, "red_cards": 0, "clean_sheets": 2, "motm": 0 }
       ],
       "previousSeason": [
           {"position": 30, "appearances": 59, "wins": 16, "draws": 21, "losses": 22, "points": 69, "goals": 23, "assists": 8, "win_percentage": 27.12, "unbeaten_percentage": 62.71, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 9, "red_cards": 2, "clean_sheets": 13, "motm": 4,
@@ -2714,7 +2714,7 @@ export const allPlayers = [
         "isInjured": false,
         "date_return": ''
       },
-      "form": ["D", "W", "W", "D", "D", "L", "L", "D", 'D', 'L', "D", 'D', 'L', 'D', 'D', 'L', "D", 'L', 'D', 'W', 'D', 'L', 'D', 'D', 'L', 'D', 'W'],
+      "form": ["D", "W", "W", "D", "D", "L", "L", "D", 'D', 'L', "D", 'D', 'L', 'D', 'D', 'L', "D", 'L', 'D', 'W', 'D', 'L', 'D', 'D', 'L', 'D', 'W', 'L'],
       "potm": false,
       "monthlyData": [
         { "month": "overall", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
@@ -2729,7 +2729,7 @@ export const allPlayers = [
         { "month": "september", "appearances": 0, "wins": 0, "draws": 1, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
         { "month": "october", "appearances": 0, "wins": 0, "draws": 2, "losses": 1, "points": 0, "goals": 1, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 1, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 1, "motm": 0 },
         { "month": "november", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
-        { "month": "december", "appearances": 0, "wins": 1, "draws": 1, "losses": 1, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 1, "motm": 0 }
+        { "month": "december", "appearances": 0, "wins": 1, "draws": 1, "losses": 2, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 1, "motm": 0 }
       ],
       "previousSeason": [
           {"position": 0, "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0,
@@ -2757,7 +2757,7 @@ export const allPlayers = [
         "isInjured": false,
         "date_return": ''
       },
-      "form": ["W", "D", "D", "D", 'D', 'W', 'W', 'L', 'L', 'L', 'D', 'W', "D", "W", "L", 'D', 'L', "L", 'D', 'W', 'W', 'D', 'L', 'W', 'D', 'W', 'D', 'D'],
+      "form": ["W", "D", "D", "D", 'D', 'W', 'W', 'L', 'L', 'L', 'D', 'W', "D", "W", "L", 'D', 'L', "L", 'D', 'W', 'W', 'D', 'L', 'W', 'D', 'W', 'D', 'D', 'W'],
       "potm": false,
       "monthlyData": [
         { "month": "overall", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
@@ -2772,7 +2772,7 @@ export const allPlayers = [
         { "month": "september", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
         { "month": "october", "appearances": 0, "wins": 1, "draws": 1, "losses": 1, "points": 0, "goals": 0, "assists": 1, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 1, "motm": 0 },
         { "month": "november", "appearances": 0, "wins": 0, "draws": 1, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 1, "motm": 0 },
-        { "month": "december", "appearances": 0, "wins": 1, "draws": 2, "losses": 0, "points": 0, "goals": 1, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 3, "motm": 0 }
+        { "month": "december", "appearances": 0, "wins": 2, "draws": 2, "losses": 0, "points": 0, "goals": 1, "assists": 1, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 4, "motm": 0 }
       ],
       "previousSeason": [
           {"position": 0, "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0,
@@ -2894,7 +2894,7 @@ export const allPlayers = [
         "isInjured": false,
         "date_return": ''
       },
-      "form": ["L", "W", "L", "L", "D", "W", "D", "D", "D", "W", "L", "D", "W", "D", 'D', 'W', "D", "D", "W", "L", "L", "D", "L", 'D', 'W', 'D', "L", 'W', 'D', 'W', 'L', 'W', 'D', 'D', 'L', 'W', 'L'],
+      "form": ["L", "W", "L", "L", "D", "W", "D", "D", "D", "W", "L", "D", "W", "D", 'D', 'W', "D", "D", "W", "L", "L", "D", "L", 'D', 'W', 'D', "L", 'W', 'D', 'W', 'L', 'W', 'D', 'D', 'L', 'W', 'L', 'L'],
       "potm": false,
       "monthlyData": [
         { "month": "overall", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
@@ -2909,7 +2909,7 @@ export const allPlayers = [
         { "month": "september", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
         { "month": "october", "appearances": 0, "wins": 1, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
         { "month": "november", "appearances": 0, "wins": 0, "draws": 0, "losses": 1, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
-        { "month": "december", "appearances": 0, "wins": 1, "draws": 0, "losses": 1, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 1, "motm": 0 }
+        { "month": "december", "appearances": 0, "wins": 1, "draws": 0, "losses": 2, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 1, "motm": 0 }
       ],
       "previousSeason": [
           {"position": 27, "appearances": 55, "wins": 15, "draws": 26, "losses": 14, "points": 71, "goals": 8, "assists": 2, "win_percentage": 27.27, "unbeaten_percentage": 74.55, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 10, "red_cards": 1, "clean_sheets": 23, "motm": 5, // needs changing, this is mahrez stats
@@ -3026,7 +3026,7 @@ export const allPlayers = [
         "isInjured": false,
         "date_return": ''
       },
-      "form": ["D", "D", "L", "D", "D", "L", "D", "D", "L", "L", "L", "D", 'D', 'W', 'L', 'L', 'W', "D", 'D', 'L', 'W'],
+      "form": ["D", "D", "L", "D", "D", "L", "D", "D", "L", "L", "L", "D", 'D', 'W', 'L', 'L', 'W', "D", 'D', 'L', 'W', 'L'],
       "potm": false,
       "monthlyData": [
         { "month": "overall", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
@@ -3041,7 +3041,7 @@ export const allPlayers = [
         { "month": "september", "appearances": 0, "wins": 1, "draws": 1, "losses": 1, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 1, "red_cards": 0, "clean_sheets": 1, "motm": 0 },
         { "month": "october", "appearances": 0, "wins": 0, "draws": 1, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 1, "motm": 0 },
         { "month": "november", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
-        { "month": "december", "appearances": 0, "wins": 1, "draws": 0, "losses": 1, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 1, "red_cards": 1, "clean_sheets": 1, "motm": 0 }
+        { "month": "december", "appearances": 0, "wins": 1, "draws": 0, "losses": 2, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 1, "red_cards": 2, "clean_sheets": 1, "motm": 0 }
       ],
       "previousSeason": [
           {"position": 0, "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0,
@@ -3310,3 +3310,4 @@ const checkYellows = () => {
 }
 
 checkYellows()
+
