@@ -36,7 +36,7 @@ const PlayersPage = () => {
   };
 
   return (
-    <div className="min-h-screen text-zinc-900 pb-24 font-sans">
+    <div className="text-zinc-900 pb-24 font-sans">
       {/* HEADER */}
       <header className="sticky top-0 z-30 bg-white/90 backdrop-blur-md border-b border-zinc-200 px-4 py-4">
         <div className="mx-auto flex flex-col gap-4">
