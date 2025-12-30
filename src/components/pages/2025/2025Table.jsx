@@ -1,21 +1,20 @@
 import React, { useState, useMemo } from 'react';
-import { Trophy, TrendingUp, Filter, Target, Zap, ChevronRight, Info } from 'lucide-react';
+import { Trophy, TrendingUp, Filter, Target, Zap, Info } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import { allPlayers } from '../../api/Players';
-import TableInfo from '../dialog/TableInfo';
+import { TwentyFivePlayers } from '../../api/2025/2025Players';
 
-const Table = () => {
+const TwentyFiveTable = () => {
   const [selectedMonth, setSelectedMonth] = useState('overall');
   const navigate = useNavigate();
 
   const availableMonths = useMemo(() => {
-    if (allPlayers.length === 0) return [];
-    const months = allPlayers[0].monthlyData.slice(1).map(m => m.month);
+    if (TwentyFivePlayers.length === 0) return [];
+    const months = TwentyFivePlayers[0].monthlyData.slice(1).map(m => m.month);
     return ['overall', ...months];
   }, []);
 
   const tableData = useMemo(() => {
-    return allPlayers.map(player => {
+    return TwentyFivePlayers.map(player => {
       const monthData = selectedMonth === 'overall' 
         ? player.monthlyData[0] 
         : player.monthlyData.find(m => m.month === selectedMonth) || player.monthlyData[0];
@@ -59,13 +58,14 @@ const Table = () => {
   };
 
   const getRankBadge = (index) => {
+    const total = tableData.length;
     const pos = index + 1;
     if (pos === 1) return 'bg-amber-400 text-amber-950 ring-1 ring-amber-500/50';
     if (pos === 2) return 'bg-zinc-300 text-zinc-800 ring-1 ring-zinc-400/50';
     if (pos === 3) return 'bg-orange-400 text-orange-950 ring-1 ring-orange-500/50';
     if (pos >= 4 && pos <= 10) return 'bg-blue-400 text-blue-950 ring-1 ring-blue-500/50';
     if (pos >= 11 && pos <= 15) return 'bg-emerald-400 text-emerald-950 ring-1 ring-emerald-500/50';
-    if (pos >= 63 && pos <= 72) return 'bg-red-400 text-red-950 ring-1 ring-red-500/50';
+    if (pos > total - 10) return 'bg-red-400 text-red-950 ring-1 ring-red-500/50'; // Bottom 10
 
     return 'bg-zinc-100 text-zinc-500';
   };
@@ -78,7 +78,7 @@ const Table = () => {
             <div className="p-2 bg-zinc-900 rounded-lg"><Trophy className="w-5 h-5 text-white" /></div>
             <div>
               <h1 className="text-lg font-black uppercase tracking-tighter italic">League Standings</h1>
-              <p className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest leading-none">Season 26</p>
+              <p className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest leading-none">Season 25</p>
             </div>
           </div>
           <div className="flex-1 sm:flex-none flex items-center gap-2 bg-zinc-100 rounded-xl px-3 py-2 border border-zinc-200">
@@ -116,11 +116,6 @@ const Table = () => {
             </div>
           ))}
         </div>
-
-        {/* Info button */}
-        <div className="ml-4 flex-shrink-0">
-          <TableInfo />
-        </div>
       </div>
 
 
@@ -138,7 +133,6 @@ const Table = () => {
                   <th className="px-2 py-4 text-[9px] font-black uppercase text-zinc-900">PTS</th>
                   <th className="px-4 py-4 text-[9px] font-black uppercase text-zinc-400">Form</th>
                   <th className="px-4 py-4 text-[9px] font-black uppercase text-zinc-400">G/A</th>
-                  <th className="px-4 py-4 text-[9px] font-black uppercase text-zinc-400 text-right">View</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-zinc-50">
@@ -187,11 +181,6 @@ const Table = () => {
                         </div>
                       </div>
                     </td>
-                    <td className="px-4 py-4 text-right">
-                      <button onClick={() => navigate(`/players/${player.id}`)} className="p-2 hover:bg-zinc-200/50 rounded-full transition-colors inline-block">
-                        <ChevronRight className="w-4 h-4 text-zinc-400" />
-                      </button>
-                    </td>
                   </tr>
                 ))}
               </tbody>
@@ -203,4 +192,4 @@ const Table = () => {
   );
 };
 
-export default Table;
+export default TwentyFiveTable;

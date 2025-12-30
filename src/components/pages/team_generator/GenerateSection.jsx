@@ -14,7 +14,7 @@ const GenerateSection = ({ activeTab, showTeams, isGenerating, positions, teams,
                   </div>
                   <h2 className="text-lg font-black uppercase mb-2">Ready to Generate</h2>
                   <p className="text-[10px] font-semibold text-zinc-500 uppercase tracking-wide leading-relaxed max-w-md mx-auto mb-6">
-                    Click the generate button above to randomly create two balanced teams with unique players in each position
+                    Click the button to generate the teams.
                   </p>
                   
                   {/* Position legend */}

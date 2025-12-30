@@ -5,6 +5,7 @@ import {
   Frame,
   Hammer,
   LayoutDashboard,
+  Medal,
   Table,
   User,
   Users,
@@ -72,6 +73,40 @@ const AppSidebar = () => {
         ]
       },
     ],
+    years: [
+      {
+        title: "2025",
+        url: "#",
+        icon: Volleyball,
+        isActive: true,
+        items: [
+          {
+            title: "Table",
+            url: "/2025-table"
+          },
+          {
+            title: "Awards",
+            url: "/2025-awards"
+          },
+        ]
+      },
+      {
+        title: "2024",
+        url: "#",
+        icon: Volleyball,
+        isActive: true,
+        items: [
+          {
+            title: "Table",
+            url: "/2024-table"
+          },
+          {
+            title: "Awards",
+            url: "/2024-awards"
+          },
+        ]
+      },
+    ],
     projects: [
       {
         name: "Dashboard",
@@ -103,6 +138,11 @@ const AppSidebar = () => {
         url: "/player-comparison",
         icon: Users2,
       },
+      {
+        name: "POTM",
+        url: "/potm",
+        icon: Medal,
+      },
     ],
     account: [
       {
@@ -127,7 +167,10 @@ const AppSidebar = () => {
         <NavProjects projects={data.projects} name={'Main'} />
         </div>
         <div id="main">
-        <NavMain items={data.navMain} />
+        <NavMain items={data.navMain} name={'Pages'} />
+        </div>
+        <div id="years">
+        <NavMain items={data.years} name={'Years'} />
         </div>
       </SidebarContent>
       <SidebarFooter>

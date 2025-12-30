@@ -16,11 +16,11 @@ import {
   SidebarMenuSubItem,
 } from "@/components/ui/sidebar"
 
-const NavMain = ({ items }) => {
+const NavMain = ({ items, name }) => {
 
   return (
     <SidebarGroup>
-      <SidebarGroupLabel>Pages</SidebarGroupLabel>
+      <SidebarGroupLabel>{name}</SidebarGroupLabel>
       <SidebarMenu>
         {items.map((item, i) => (
           <div key={i} id={`main-${i}`}>

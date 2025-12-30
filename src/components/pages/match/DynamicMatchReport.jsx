@@ -6,6 +6,7 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useParams, useNavigate } from 'react-router-dom';
 import { allMatches } from '../../api/Matches';
+import MatchTable from './MatchTable';
 
 const DynamicMatchReport = () => {
   const { id } = useParams();
@@ -63,6 +64,7 @@ const DynamicMatchReport = () => {
           <TabsList className="bg-white p-1 h-11 rounded-2xl border border-zinc-200 flex w-full mb-4">
             <TabsTrigger value="summary" className="flex-1 rounded-xl text-[9px] font-black uppercase">Summary</TabsTrigger>
             <TabsTrigger value="lineups" className="flex-1 rounded-xl text-[9px] font-black uppercase">Lineups</TabsTrigger>
+            <TabsTrigger value="table" className="flex-1 rounded-xl text-[9px] font-black uppercase">Table</TabsTrigger>
           </TabsList>
 
           {/* TAB: SUMMARY */}
@@ -128,6 +130,13 @@ const DynamicMatchReport = () => {
                 <p className='text-[10px] font-black uppercase tracking-tighter'>Away Team</p>
             </div>
           </TabsContent>
+
+          {/* TAB: TABLE */}
+          <TabsContent value='table'>
+          {match && <MatchTable match={match} />}
+          </TabsContent>
+
+
         </Tabs>
       </main>
     </div>

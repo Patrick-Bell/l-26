@@ -1,44 +1,38 @@
 import React, { useState, useMemo } from 'react';
-import { Trophy, TrendingUp, Filter, Target, Zap, ChevronRight, Info } from 'lucide-react';
+import { Trophy, TrendingUp, Filter, Target, Zap, Info } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import { allPlayers } from '../../api/Players';
-import TableInfo from '../dialog/TableInfo';
+import { TwentyFourPlayers } from '../../api/2024/2024Players';
 
-const Table = () => {
+const TwentyFourTable = () => {
   const [selectedMonth, setSelectedMonth] = useState('overall');
   const navigate = useNavigate();
 
   const availableMonths = useMemo(() => {
-    if (allPlayers.length === 0) return [];
-    const months = allPlayers[0].monthlyData.slice(1).map(m => m.month);
+    if (TwentyFourPlayers.length === 0) return [];
+    const months = TwentyFourPlayers[0].monthlyData.slice(1).map(m => m.month);
     return ['overall', ...months];
   }, []);
 
   const tableData = useMemo(() => {
-    return allPlayers.map(player => {
+    return TwentyFourPlayers.map(player => {
       const monthData = selectedMonth === 'overall' 
         ? player.monthlyData[0] 
         : player.monthlyData.find(m => m.month === selectedMonth) || player.monthlyData[0];
 
-      const wins = player.form.filter(r => r === 'W').length;
-      const draws = player.form.filter(r => r === 'D').length;
-      const losses = player.form.filter(r => r === 'L').length;
       
       return {
         id: player.id,
         name: player.name,
         position: player.position,
-        image: player.images[0],
-        nationality: player.nationality,
-        gamesPlayed: monthData.appearances || (wins + draws + losses),
-        wins: monthData.wins,
-        draws: monthData.draws,
-        losses: monthData.losses,
-        points: monthData.points || 0,
+        image: player.picture,
+        gamesPlayed: monthData.apps,
+        wins: monthData.won,
+        draws: monthData.draw,
+        losses: monthData.apps - monthData.won - monthData.draw,
+        points: monthData.won * 3 + monthData.draw,
         goals: monthData.goals || 0,
         assists: monthData.assists || 0,
         winPercentage: monthData.win_percentage || 0,
-        form: player.form.slice(-5),
         potm: player.potm
       };
     }).sort((a, b) => b.points - a.points);
@@ -54,19 +48,21 @@ const Table = () => {
     if (pos === 3) return 'border-l-orange-400'; // Bronze
     if (pos >= 4 && pos <= 10) return 'border-l-blue-400'; // Blue Zone
     if (pos >= 11 && pos <= 15) return 'border-l-emerald-400'; // Green Zone
-    if (pos > total - 10) return 'border-l-red-400'; // Bottom 10
+    if (pos >= 54 && pos <= 63) return 'border-l-red-400'; // Green Zone
+    if (pos === 64 ) return 'border-l-black'; // Bottom 10
     return 'border-l-transparent';
   };
 
   const getRankBadge = (index) => {
+    const total = tableData.length;
     const pos = index + 1;
     if (pos === 1) return 'bg-amber-400 text-amber-950 ring-1 ring-amber-500/50';
     if (pos === 2) return 'bg-zinc-300 text-zinc-800 ring-1 ring-zinc-400/50';
     if (pos === 3) return 'bg-orange-400 text-orange-950 ring-1 ring-orange-500/50';
     if (pos >= 4 && pos <= 10) return 'bg-blue-400 text-blue-950 ring-1 ring-blue-500/50';
     if (pos >= 11 && pos <= 15) return 'bg-emerald-400 text-emerald-950 ring-1 ring-emerald-500/50';
-    if (pos >= 63 && pos <= 72) return 'bg-red-400 text-red-950 ring-1 ring-red-500/50';
-
+    if (pos >= 54 && pos <= 63) return 'bg-red-400 text-red-950 ring-1 ring-red-500/50'; // Green Zone
+    if (pos === 64 ) return 'bg-black text-white'; // Bottom 10
     return 'bg-zinc-100 text-zinc-500';
   };
 
@@ -78,7 +74,7 @@ const Table = () => {
             <div className="p-2 bg-zinc-900 rounded-lg"><Trophy className="w-5 h-5 text-white" /></div>
             <div>
               <h1 className="text-lg font-black uppercase tracking-tighter italic">League Standings</h1>
-              <p className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest leading-none">Season 26</p>
+              <p className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest leading-none">Season 24</p>
             </div>
           </div>
           <div className="flex-1 sm:flex-none flex items-center gap-2 bg-zinc-100 rounded-xl px-3 py-2 border border-zinc-200">
@@ -109,17 +105,13 @@ const Table = () => {
             { label: 'Top 10', color: 'bg-blue-400' },
             { label: '11-15', color: 'bg-emerald-400' },
             { label: 'Relegation', color: 'bg-red-400' },
+            { label: 'Forfeit', color: 'bg-black' },
           ].map((item) => (
             <div key={item.label} className="flex items-center gap-1.5">
               <div className={`w-2 h-2 rounded-full ${item.color}`} />
               <span className="text-[9px] font-black uppercase text-zinc-600">{item.label}</span>
             </div>
           ))}
-        </div>
-
-        {/* Info button */}
-        <div className="ml-4 flex-shrink-0">
-          <TableInfo />
         </div>
       </div>
 
@@ -136,9 +128,6 @@ const Table = () => {
                   <th className="px-2 py-4 text-[9px] font-black uppercase text-zinc-500">D</th>
                   <th className="px-2 py-4 text-[9px] font-black uppercase text-rose-500">L</th>
                   <th className="px-2 py-4 text-[9px] font-black uppercase text-zinc-900">PTS</th>
-                  <th className="px-4 py-4 text-[9px] font-black uppercase text-zinc-400">Form</th>
-                  <th className="px-4 py-4 text-[9px] font-black uppercase text-zinc-400">G/A</th>
-                  <th className="px-4 py-4 text-[9px] font-black uppercase text-zinc-400 text-right">View</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-zinc-50">
@@ -155,7 +144,6 @@ const Table = () => {
                         <div className="min-w-0">
                           <h3 className="text-xs font-black uppercase truncate leading-none mb-1">{player.name}</h3>
                           <div className="flex items-center gap-1.5">
-                            <img src={player.nationality} className="w-3 h-2 rounded-sm" alt="" />
                             <span className="text-[8px] font-bold text-zinc-400 uppercase tracking-tighter">{player.position}</span>
                           </div>
                         </div>
@@ -168,30 +156,6 @@ const Table = () => {
                     <td className="px-2 py-4">
                       <span className="inline-block bg-zinc-900 text-white text-xs font-black px-2 py-1 rounded-md min-w-[28px]">{player.points}</span>
                     </td>
-                    <td className="px-4 py-4">
-                      <div className="flex items-center justify-center gap-1">
-                        {player.form.map((res, i) => (
-                          <div key={i} className={`w-4 h-4 rounded-sm flex items-center justify-center text-[7px] font-black ${
-                            res === 'W' ? 'bg-emerald-500 text-white' : res === 'D' ? 'bg-zinc-200 text-zinc-500' : 'bg-rose-500 text-white'
-                          }`}>{res}</div>
-                        ))}
-                      </div>
-                    </td>
-                    <td className="px-4 py-4">
-                      <div className="flex items-center justify-center gap-1.5">
-                        <div className="flex items-center gap-0.5 bg-emerald-50 text-emerald-700 px-1.5 py-0.5 rounded text-[10px] font-black">
-                          <Target className="w-2.5 h-2.5" /> {player.goals}
-                        </div>
-                        <div className="flex items-center gap-0.5 bg-blue-50 text-blue-700 px-1.5 py-0.5 rounded text-[10px] font-black">
-                          <Zap className="w-2.5 h-2.5" /> {player.assists}
-                        </div>
-                      </div>
-                    </td>
-                    <td className="px-4 py-4 text-right">
-                      <button onClick={() => navigate(`/players/${player.id}`)} className="p-2 hover:bg-zinc-200/50 rounded-full transition-colors inline-block">
-                        <ChevronRight className="w-4 h-4 text-zinc-400" />
-                      </button>
-                    </td>
                   </tr>
                 ))}
               </tbody>
@@ -203,4 +167,4 @@ const Table = () => {
   );
 };
 
-export default Table;
+export default TwentyFourTable;

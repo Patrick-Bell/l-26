@@ -5,9 +5,9 @@ import {
   ChartArea,
   CardSim
 } from 'lucide-react';
-import { allPlayers } from '../../api/Players';
+import { TwentyFivePlayers } from '../../api/2025/2025Players'
 
-const PlayerLeaderboard = () => {
+const TwentyFiveLeaderboard = () => {
   const [activeMonth, setActiveMonth] = useState('overall');
 
   const months = ["overall", "january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"];
@@ -27,7 +27,7 @@ const PlayerLeaderboard = () => {
   ];
 
   const getSortedData = (key) => {
-    return [...allPlayers]
+    return [...TwentyFivePlayers]
       .map(p => {
         const stats = p.monthlyData.find(m => m.month === activeMonth) || {};
         const apps = stats.appearances || 0;
@@ -59,29 +59,32 @@ const PlayerLeaderboard = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white text-zinc-900 font-sans pb-20 selection:bg-zinc-100">
-      
-      {/* HEADER */}
-      <div className="flex items-center justify-between mb-6 border-b border-zinc-100 pb-4">
-      <div className="flex items-center gap-3">
-            <div className="p-2 bg-zinc-900 rounded-lg"><ChartArea className="w-5 h-5 text-white" /></div>
+    <div className="min-h-screen pb-20">
+
+<header className="bg-white border-b border-zinc-200 sticky top-0 z-40">
+        <div className="mx-auto px-4 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <div className="p-2 bg-zinc-900 rounded-lg">
+              <Medal className="w-5 h-5 text-white" />
+            </div>
             <div>
               <h1 className="text-lg font-black uppercase tracking-tighter italic">Leaderboards</h1>
-              <p className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest leading-none">{activeMonth}</p>
+              <p className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest leading-none">Season 25</p>
             </div>
           </div>
-        
-        <select 
+          <select 
           value={activeMonth} 
           onChange={(e) => setActiveMonth(e.target.value)}
           className="text-[10px] font-black uppercase border border-zinc-200 rounded-lg px-3 py-1.5 bg-zinc-50 outline-none appearance-none cursor-pointer"
         >
           {months.map(m => <option key={m} value={m}>{m}</option>)}
         </select>
-      </div>
+        </div>
+      </header>
+         
 
       {/* GRID */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 mt-6">
         {categories.map((cat) => (
           <div key={cat.key} className="border border-zinc-100 rounded-xl overflow-hidden bg-white shadow-sm">
             
@@ -134,4 +137,4 @@ const PlayerLeaderboard = () => {
   );
 };
 
-export default PlayerLeaderboard;
+export default TwentyFiveLeaderboard;

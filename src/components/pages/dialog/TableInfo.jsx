@@ -32,12 +32,12 @@ const TableInfo = () => {
           <div>
             <h4 className="font-bold mb-2 text-zinc-900">Positions & Colors</h4>
             <ul className="space-y-1">
-              <li><span className="inline-block w-3 h-3 bg-amber-400 mr-2 rounded-full" />1 - Winner (Champion)</li>
-              <li><span className="inline-block w-3 h-3 bg-zinc-300 mr-2 rounded-full" />2 - Runner Up</li>
-              <li><span className="inline-block w-3 h-3 bg-orange-400 mr-2 rounded-full" />3 - Podium</li>
-              <li><span className="inline-block w-3 h-3 bg-blue-400 mr-2 rounded-full" />4-10 - Top 10</li>
-              <li><span className="inline-block w-3 h-3 bg-emerald-400 mr-2 rounded-full" />11-15 - Mid Table</li>
-              <li><span className="inline-block w-3 h-3 bg-red-400 mr-2 rounded-full" />Bottom 10</li>
+              <li><span className="inline-block w-3 h-3 bg-amber-400 mr-2 rounded-full" />Winner (Champion)</li>
+              <li><span className="inline-block w-3 h-3 bg-zinc-300 mr-2 rounded-full" />Runner Up</li>
+              <li><span className="inline-block w-3 h-3 bg-orange-400 mr-2 rounded-full" />Third</li>
+              <li><span className="inline-block w-3 h-3 bg-blue-400 mr-2 rounded-full" />Top 10</li>
+              <li><span className="inline-block w-3 h-3 bg-emerald-400 mr-2 rounded-full" />11-15</li>
+              <li><span className="inline-block w-3 h-3 bg-red-400 mr-2 rounded-full" />Relegation</li>
             </ul>
           </div>
 
@@ -48,7 +48,7 @@ const TableInfo = () => {
             <ol className="list-decimal list-inside mt-2 space-y-1">
               <li><strong>PTS:</strong> Total points earned</li>
               <li><strong>PTS per Game:</strong> Points divided by games played</li>
-              <li><strong>MOTM:</strong> Number of "Man of the Match" awards</li>
+              <li><strong>MOTM:</strong> Number of "Man of the Match" awards in month</li>
               <li><strong>Discipline:</strong> Least amount of yellow cards</li>
             </ol>
           </div>

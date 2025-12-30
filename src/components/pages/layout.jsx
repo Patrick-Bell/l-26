@@ -32,6 +32,11 @@ import logo from '../../assets/image.png'
 import PageNotFound from "./dashboard/PageNotFound"
 import PlayerComparison from "./compare/PlayerComparison"
 import Awards from "./awards/Awards"
+import POTM from "./potm/POTM"
+import TwentyFiveTable from "./2025/2025Table"
+import TwentyFourTable from "./2024/2024Table"
+import TwentyFiveAwards from "./2025/2025Awards"
+import TwentyFourAwards from "./2024/2024Awards"
 
 
 const Page = () => {
@@ -70,6 +75,12 @@ const Page = () => {
         break
       case path === '/leaderboard':
         setSection("Leaderboards")
+        break
+      case path === '/2024-table':
+        setSection("2024 Table")
+        break
+      case path === '/2025-table':
+        setSection("2025 Table")
         break
       default:
         setSection("Lego League")
@@ -143,6 +154,15 @@ const Page = () => {
               <Route path="*" element={<PageNotFound />} />
               <Route path="player-comparison" element={<PlayerComparison />} />
               <Route path="/awards" element={<Awards />} />
+              <Route path="/potm" element={<POTM />} /> 
+
+              <Route path="/2025-table" element={<TwentyFiveTable />} />
+              <Route path="/2025-awards" element={<TwentyFiveAwards />} />
+
+
+              <Route path="/2024-table" element={<TwentyFourTable />} />
+              <Route path="/2024-awards" element={<TwentyFourAwards />} />
+
           </Routes>
             
         </div>

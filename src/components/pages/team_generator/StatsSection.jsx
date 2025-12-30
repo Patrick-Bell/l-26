@@ -102,7 +102,7 @@ const StatsSection = ({ getMatchStats, getPredictedWinner, activeTab, teams, mat
             return (
               <div className="flex items-center justify-between">
                 <span className="text-xs text-gray-600 font-bold uppercase tracking-wide">
-                  The Generator predicts a win for the {prediction.winner}.
+                  The Generator predicts {prediction.winner === 'draw' ? 'a draw' : `a win for the ${prediction.winner}`}.
                 </span>
 
                 {prediction.winner !== 'Draw' && (
