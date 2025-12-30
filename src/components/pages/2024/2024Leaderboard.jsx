@@ -29,7 +29,7 @@ const TwentyFourLeaderboard = () => {
     return [...TwentyFourPlayers]
       .map(p => {
         const stats = p.monthlyData.find(m => m.month === activeMonth) || {};
-        const apps = stats.appearances || 0;
+        const apps = stats.apps || 0;
         
         // 1. Calculate main value
         const value = key === 'contribution' 
