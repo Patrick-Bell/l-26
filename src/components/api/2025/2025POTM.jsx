@@ -189,7 +189,7 @@ export const potmWinners = [
           position: "GK"
         },
         stats: {
-          goals: 3,
+          goals: 1,
           assists: 1,
           cleanSheets: 2,
           motm: 1

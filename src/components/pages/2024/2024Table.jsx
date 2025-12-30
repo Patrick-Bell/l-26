@@ -138,7 +138,7 @@ const TwentyFourTable = () => {
                         {index + 1}
                       </span>
                     </td>
-                    <td className="px-4 py-4 sticky left-0 z-10 text-left min-w-[180px] bg-white">
+                    <td className="px-4 py-4 sticky left-0 z-10 text-left max-w-[100px] bg-white">
                       <div className="flex items-center gap-3 bg-white blur-10">
                         <img src={player.image} className="w-10 h-12 object-cover rounded-lg bg-zinc-100" alt="" />
                         <div className="min-w-0">
