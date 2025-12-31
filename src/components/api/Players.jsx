@@ -1,3 +1,5 @@
+import mendyImg from '../../assets/players/mendy.png'
+
 export const allPlayers = [
   {
       "id": "1", "name": "Ronaldo",
@@ -778,7 +780,7 @@ export const allPlayers = [
       "nationality": "https://flagicons.lipis.dev/flags/4x3/sn.svg",
       "joined": "01-01-2025", "position": "GK",
       "images": [
-        "https://league-2026.netlify.app/src/assets/players/mendy.png"
+        mendyImg
       ],
       "suspended": {
         "isYellowSuspended": false,
