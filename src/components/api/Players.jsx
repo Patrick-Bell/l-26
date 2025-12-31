@@ -778,7 +778,7 @@ export const allPlayers = [
       "nationality": "https://flagicons.lipis.dev/flags/4x3/sn.svg",
       "joined": "01-01-2025", "position": "GK",
       "images": [
-        "http://localhost:5173/src/assets/players/mendy.png"
+        "https://league-2026.netlify.app/src/assets/players/mendy.png"
       ],
       "suspended": {
         "isYellowSuspended": false,
