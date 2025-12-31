@@ -82,6 +82,12 @@ const Page = () => {
       case path === '/2025-table':
         setSection("2025 Table")
         break
+        case path === '/2025-awards':
+        setSection("2025 Awards")
+        break
+        case path === '/2024-awards':
+        setSection("2024 Awards")
+        break
       default:
         setSection("Lego League")
     }

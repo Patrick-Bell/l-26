@@ -144,6 +144,7 @@ const comparisonData = useMemo(() => {
               <div className="flex items-center gap-1.5 mb-1">
                 <img src={player.nationality} className="w-5 h-3.5 rounded-sm" alt="flag" />
                 <span className="text-[8px] font-bold text-zinc-400 uppercase tracking-widest">{player.joined}</span>
+                
               </div>
               
               <h2 className="text-2xl font-black uppercase tracking-tighter leading-none mb-2">{player.name}</h2>

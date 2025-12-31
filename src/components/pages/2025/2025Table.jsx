@@ -18,7 +18,7 @@ const TwentyFiveTable = () => {
       const monthData = selectedMonth === 'overall' 
         ? player.monthlyData[0] 
         : player.monthlyData.find(m => m.month === selectedMonth) || player.monthlyData[0];
-
+  
       const wins = player.form.filter(r => r === 'W').length;
       const draws = player.form.filter(r => r === 'D').length;
       const losses = player.form.filter(r => r === 'L').length;
@@ -38,10 +38,29 @@ const TwentyFiveTable = () => {
         assists: monthData.assists || 0,
         winPercentage: monthData.win_percentage || 0,
         form: player.form.slice(-5),
-        potm: player.potm
+        motm: player.motm || 0,
+        cleanSheets: monthData.clean_sheets || 0,
+        yellowCards: monthData.yellow_cards || 0
       };
-    }).sort((a, b) => b.points - a.points);
+    }).sort((a, b) => {
+      // 1. Points
+      if (b.points !== a.points) return b.points - a.points;
+  
+      // 2. Games Played (fewer is better)
+      if (a.gamesPlayed !== b.gamesPlayed) return a.gamesPlayed - b.gamesPlayed;
+  
+      // 3. MOTM
+      if (b.motm !== a.motm) return b.motm - a.motm;
+  
+      // 4. Clean Sheets
+      if (b.cleanSheets !== a.cleanSheets) return b.cleanSheets - a.cleanSheets;
+  
+      // 5. Yellow Cards (fewer is better)
+      return a.yellowCards - b.yellowCards;
+    });
   }, [selectedMonth]);
+  
+  
 
   // COLOR LOGIC FOR ROWS
   const getRowStyle = (index) => {

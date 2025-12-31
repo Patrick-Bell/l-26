@@ -137,7 +137,7 @@ const PlayersPage = () => {
               {/* TOP PROFILE SNAPSHOT */}
               <div className="flex gap-5 items-stretch mb-6 relative">
                 <div className="relative">
-                  <div className="w-24 h-28 rounded-2xl overflow-hidden shadow-sm ring-1 ring-zinc-200 bg-zinc-50">
+                  <div onClick={() => navigate(`/players/${selectedPlayer.id}`)} className="w-24 h-28 rounded-2xl overflow-hidden shadow-sm ring-1 ring-zinc-200 bg-zinc-50 cursor-pointer">
                     <img src={selectedPlayer.images[0]} className="w-full h-full object-cover object-top" alt={selectedPlayer.name} />
                   </div>
                   {selectedPlayer.potm && (
