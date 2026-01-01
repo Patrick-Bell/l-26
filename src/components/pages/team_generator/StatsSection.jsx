@@ -122,7 +122,7 @@ const StatsSection = ({ getMatchStats, getPredictedWinner, activeTab, teams, mat
                   Referee
                 </h3>
                 <span className="text-xs text-gray-600 font-bold uppercase tracking-wide">
-                  {matches.length % 2 === 0 ? 'The referee for this game is Headband.' : 'The referee for this game is Refil.'}
+                  {matches.length % 2 === 0 ? 'The referee for this game is Refil.' : 'The referee for this game is Headband.'}
                 </span>
                 </div>
 
