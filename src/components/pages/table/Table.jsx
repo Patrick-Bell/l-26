@@ -15,34 +15,53 @@ const Table = () => {
   }, []);
 
   const tableData = useMemo(() => {
-    return allPlayers.map(player => {
-      const monthData = selectedMonth === 'overall' 
-        ? player.monthlyData[0] 
-        : player.monthlyData.find(m => m.month === selectedMonth) || player.monthlyData[0];
-
-      const wins = player.form.filter(r => r === 'W').length;
-      const draws = player.form.filter(r => r === 'D').length;
-      const losses = player.form.filter(r => r === 'L').length;
-      
-      return {
-        id: player.id,
-        name: player.name,
-        position: player.position,
-        image: player.images[0],
-        nationality: player.nationality,
-        gamesPlayed: monthData.appearances || (wins + draws + losses),
-        wins: monthData.wins,
-        draws: monthData.draws,
-        losses: monthData.losses,
-        points: monthData.points || 0,
-        goals: monthData.goals || 0,
-        assists: monthData.assists || 0,
-        winPercentage: monthData.win_percentage || 0,
-        form: player.form.slice(-5),
-        potm: player.potm
-      };
-    }).sort((a, b) => b.points - a.points);
-  }, [selectedMonth]);
+    return allPlayers
+      .map(player => {
+        const monthData =
+          selectedMonth === 'overall'
+            ? player.monthlyData?.find(m => m.month === 'overall')
+            : player.monthlyData?.find(m => m.month === selectedMonth);
+  
+        const safeMonthData = monthData ?? {};
+  
+        const wins = player.form.filter(r => r === 'W').length;
+        const draws = player.form.filter(r => r === 'D').length;
+        const losses = player.form.filter(r => r === 'L').length;
+        const totalGames = wins + draws + losses;
+  
+        return {
+          id: player.id,
+          name: player.name,
+          position: player.position,
+          image: player.images?.[0] ?? null,
+          nationality: player.nationality,
+  
+          gamesPlayed: safeMonthData.appearances ?? totalGames,
+          wins: safeMonthData.wins ?? wins,
+          draws: safeMonthData.draws ?? draws,
+          losses: safeMonthData.losses ?? losses,
+  
+          points: safeMonthData.points ?? 0,
+          goals: safeMonthData.goals ?? 0,
+          assists: safeMonthData.assists ?? 0,
+          winPercentage: safeMonthData.win_percentage ?? 0,
+  
+          form: player.form.slice(-5),
+          potm: player.potm,
+          cleanSheets: safeMonthData.clean_sheets ?? 0,
+          motm: safeMonthData.motm ?? 0,
+          yellowCards: safeMonthData.yellow_cards ?? 0,
+        };
+      })
+      .sort((a, b) =>
+        b.points - a.points ||
+        a.gamesPlayed - b.gamesPlayed ||
+        b.motm - a.motm ||
+        b.cleanSheets - a.cleanSheets ||
+        a.yellowCards - b.yellowCards
+      );
+  }, [allPlayers, selectedMonth]);
+  
 
   // COLOR LOGIC FOR ROWS
   const getRowStyle = (index) => {

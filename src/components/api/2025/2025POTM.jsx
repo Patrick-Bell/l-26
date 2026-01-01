@@ -224,5 +224,28 @@ export const potmWinners = [
         ],
         message: 'Won by points'
       },
+
+      {
+        id: 12,
+        month: "December 2025",
+        player: {
+          name: "Ramos",
+          image: '',
+          nationality: 'https://flagicons.lipis.dev/flags/4x3/es.svg',
+          position: "LM"
+        },
+        stats: {
+          goals: 2,
+          assists: 2,
+          cleanSheets: 5,
+          motm: 1
+        },
+        standings: [
+          { pos: 1, player: "Ramos", record: '4-3-0', points: 15 },
+          { pos: 2, player: "De Bruyne", record: '4-2-0', points: 14 },
+          { pos: 3, player: "Reus", record: '4-0-1', points: 12 },
+        ],
+        message: 'Won by points'
+      },
  
   ]

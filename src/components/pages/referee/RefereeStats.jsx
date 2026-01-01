@@ -3,7 +3,7 @@ import { Shield, Scale, Target, Trophy, Layers, Activity, Hammer } from 'lucide-
 import { allMatches } from '../../api/Matches';
 
 const RefereeLeaderboard = () => {
-  const mainReferees = ["Krusty"];
+  const mainReferees = ["Krusty", "Refil", "Headband"];
 
   const refereeStats = useMemo(() => {
     return mainReferees.map(refName => {

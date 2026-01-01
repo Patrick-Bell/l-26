@@ -12,10 +12,12 @@ import {
 } from '@/components/ui/drawer'; 
 import { allPlayers } from '../../api/Players';
 import { useNavigate } from 'react-router-dom';
+import SuspensionsModal from '../dialog/SuspensionsModal';
 
 const PlayersPage = () => {
   const [selectedPlayer, setSelectedPlayer] = useState(null);
   const [positionFilter, setPositionFilter] = useState('ALL');
+  const [open, setOpen] = useState(false)
 
   const navigate = useNavigate()
 
@@ -35,8 +37,13 @@ const PlayersPage = () => {
     return null;
   };
 
+  <button 
+        variant="outline" className="px-3 py-1 rounded-md text-[10px] font-bold transition-all shrink-0 bg-yellow-400 font-sans uppercase cursor-pointer">Suspensions
+        </button>
+
   return (
     <div className="text-zinc-900 pb-24 font-sans">
+
       {/* HEADER */}
       <header className="sticky top-0 z-30 bg-white/90 backdrop-blur-md border-b border-zinc-200 px-4 py-4">
         <div className="mx-auto flex flex-col gap-4">
@@ -62,6 +69,8 @@ const PlayersPage = () => {
                   {pos}
                 </button>
               ))}
+              <div className='h-5 w-[0.4px] mx-2 bg-zinc-500 flex items-center align-middle'></div>
+              <SuspensionsModal players={allPlayers} />
             </div>
           </div>
         </div>
