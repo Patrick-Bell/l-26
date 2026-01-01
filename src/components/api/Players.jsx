@@ -45,7 +45,7 @@ export const allPlayers = [
       ],
       "previousSeason": [
           {"position": 18, "appearances": 62, "wins": 20, "draws": 19, "losses": 23, "points": 79, "goals": 26, "assists": 6, "win_percentage": 32.26, "unbeaten_percentage": 62.90, "own_goals": 1, "slingers": 6, "penalties": 0, "hatricks": 1, "yellow_cards": 10, "red_cards": 0, "clean_sheets": 22, "motm": 9,
-              awards: ["Most Slingers - 2024 (6)"]
+              awards: ["Most Slingers - 2024 (6)", "Most Goals/Assists - 2025 (22)"]
           }
       ]
     },
@@ -139,7 +139,7 @@ export const allPlayers = [
       ],
       "previousSeason": [
           {"position": 48, "appearances": 46, "wins": 10, "draws": 17, "losses": 19, "points": 47, "goals": 5, "assists": 13, "win_percentage": 21.74, "unbeaten_percentage": 58.70, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 11, "red_cards": 1, "clean_sheets": 12, "motm": 0,
-              awards: []
+              awards: ["Top Assister - 2025 (11)"]
           }
       ]
     },
@@ -184,7 +184,7 @@ export const allPlayers = [
         ],
       "previousSeason": [
           {"position": 12, "appearances": 53, "wins": 22, "draws": 23, "losses": 8, "points": 89, "goals": 27, "assists": 9, "win_percentage": 41.51, "unbeaten_percentage": 84.91, "own_goals": 0, "slingers": 4, "penalties": 1, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 18, "motm": 9,
-              awards: []
+              awards: ["Top Scorer - 2025 (19)"]
           }
       ]
     },
@@ -273,7 +273,7 @@ export const allPlayers = [
       ],
       "previousSeason": [
           {"position": 0, "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0,
-              awards: ["POTM - February (2025)", "POTM - June (2025)", "POTM - July (2025)"]
+              awards: ["POTM - February (2025)", "POTM - June (2025)", "POTM - July (2025)", "Most Wins - 2025 (20)", "Most Clean Sheets - 2025 (20)", "League Champion - 2025 (80 points)"]
           }
       ]
     },
@@ -858,8 +858,8 @@ export const allPlayers = [
         { "month": "december", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 }
       ],
       "previousSeason": [
-          {"position": 8, "appearances": 69, "wins": 22, "draws": 31, "losses": 16, "points": 97, "goals": 32, "assists": 11, "win_percentage": 30.43, "unbeaten_percentage": 75.36, "own_goals": 0, "slingers": 5, "penalties": 1, "hatricks": 0, "yellow_cards": 6, "red_cards": 0, "clean_sheets": 20, "motm": 10,
-              awards: ["POTM - October (2024)", "Top Scorer - 32 (2024)"]
+          {"position": 0, "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0,
+              awards: []
           }
       ]
     },
@@ -1127,7 +1127,7 @@ export const allPlayers = [
       ],
       "previousSeason": [
           {"position": 5, "appearances": 80, "wins": 29, "draws": 23, "losses": 27, "points": 111, "goals": 0, "assists": 7, "win_percentage": 36.25, "unbeaten_percentage": 65.00, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 2, "red_cards": 0, "clean_sheets": 25, "motm": 3,
-              awards: ["POTM - February (2024)"]
+              awards: ["POTM - February (2024)", 'POTM - October (2025)']
           }
       ]
     },
@@ -1743,7 +1743,7 @@ export const allPlayers = [
       ],
       "previousSeason": [
           {"position": 0, "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0,
-              awards: []
+              awards: ["POTM - December (2025)"]
           }
       ]
     },
@@ -1920,7 +1920,7 @@ export const allPlayers = [
       ],
       "previousSeason": [
           {"position": 0, "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0,
-              awards: []
+              awards: ['POTM - April (2025)']
           }
       ]
     },
