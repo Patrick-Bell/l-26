@@ -169,7 +169,7 @@ const Table = () => {
                       </span>
                     </td>
                     <td className="px-4 py-4 sticky left-0 z-10 text-left min-w-[180px] bg-white">
-                      <div className="flex items-center gap-3 bg-white blur-10">
+                      <div onClick={() => navigate(`/players/${player.id}`)} className="flex items-center gap-3 bg-white blur-10 cursor-pointer">
                         <img src={player.image} className="w-10 h-12 object-cover rounded-lg bg-zinc-100" alt="" />
                         <div className="min-w-0">
                           <h3 className="text-xs font-black uppercase truncate leading-none mb-1">{player.name}</h3>

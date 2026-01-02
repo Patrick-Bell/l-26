@@ -1,291 +1,399 @@
 import React from 'react';
-import { Trophy, Award, Target, Crown, Star, Medal, Zap, Shield, Calendar, AlertCircle } from 'lucide-react';
+import { Trophy, Award, Target, Crown, Star, Medal, Zap, Shield, Calendar, AlertCircle, TrendingUp, Home, Plane } from 'lucide-react';
 import { allPlayers } from '../../api/Players';
 import { allMatches } from '../../api/Matches';
 
 const Awards = () => {
 
-  // Calculate milestone achievements
-  const getMilestoneAchievements = () => {
-    const achievements = [];
+  // Helper function to find all record holders (handles ties)
+  const findRecordHolders = (players, getValue) => {
+    if (players.length === 0) return [];
+    
+    const playersWithValues = players.map(p => ({
+      player: p,
+      value: getValue(p)
+    })).filter(p => p.value > 0);
 
-    allPlayers.forEach(player => {
-      const overallStats = player.monthlyData.find(m => m.month === 'overall');
-      
-      // Appearance milestones
-      if (overallStats.appearances === 1) {
-        achievements.push({
-          player,
-          title: '1st Game',
-          description: 'First appearance',
-          icon: <Star className="w-4 h-4" />,
-          type: 'milestone'
-        });
-      }
-      if (overallStats.appearances === 10) {
-        achievements.push({
-          player,
-          title: '10th Game',
-          description: '10 appearances reached',
-          icon: <Star className="w-4 h-4" />,
-          type: 'milestone'
-        });
-      }
-      if (overallStats.appearances === 50) {
-        achievements.push({
-          player,
-          title: '50th Game',
-          description: '50 appearances milestone',
-          icon: <Medal className="w-4 h-4" />,
-          type: 'milestone'
-        });
-      }
-      if (overallStats.appearances === 100) {
-        achievements.push({
-          player,
-          title: '100th Game',
-          description: 'Century of appearances',
-          icon: <Trophy className="w-4 h-4" />,
-          type: 'milestone'
-        });
-      }
-    });
+    if (playersWithValues.length === 0) return [];
 
-    return achievements;
+    const maxValue = Math.max(...playersWithValues.map(p => p.value));
+    return playersWithValues.filter(p => p.value === maxValue);
   };
 
-  // Get record holders
-  const getRecordHolders = () => {
+  // Helper function to find monthly record holders (handles ties)
+  const findMonthlyRecordHolders = (getValue) => {
+    let maxValue = 0;
+    let holders = [];
+    let month = '';
+
+    allPlayers.forEach(player => {
+      player.monthlyData.forEach(monthData => {
+        if (monthData.month !== 'overall') {
+          const value = getValue(monthData);
+          if (value > maxValue) {
+            maxValue = value;
+            holders = [{ player, month: monthData.month }];
+          } else if (value === maxValue && value > 0) {
+            holders.push({ player, month: monthData.month });
+          }
+        }
+      });
+    });
+
+    return holders.length > 0 ? { holders, value: maxValue } : null;
+  };
+
+  // Get disciplinary records
+  const getDisciplinaryRecords = () => {
     const records = [];
 
-    // Most goals overall
-    const topScorer = [...allPlayers]
-      .map(p => ({
-        ...p,
-        goals: p.monthlyData.find(m => m.month === 'overall')?.goals || 0
-      }))
-      .sort((a, b) => b.goals - a.goals)[0];
-    
-    if (topScorer.goals > 0) {
-      records.push({
-        title: 'Most Goals',
-        subtitle: 'All-time record',
-        player: topScorer,
-        value: topScorer.goals,
-        label: 'Goals',
-        icon: <Target className="w-5 h-5" />,
-        color: 'amber'
-      });
-    }
-
-    // Most goals in a month
-    let mostGoalsInMonth = { player: null, goals: 0, month: '' };
-    allPlayers.forEach(player => {
-      player.monthlyData.forEach(month => {
-        if (month.month !== 'overall' && month.goals > mostGoalsInMonth.goals) {
-          mostGoalsInMonth = { player, goals: month.goals, month: month.month };
-        }
-      });
-    });
-    
-    if (mostGoalsInMonth.player) {
-      records.push({
-        title: 'Most Goals in a Month',
-        subtitle: mostGoalsInMonth.month.charAt(0).toUpperCase() + mostGoalsInMonth.month.slice(1),
-        player: mostGoalsInMonth.player,
-        value: mostGoalsInMonth.goals,
-        label: 'Goals',
-        icon: <Zap className="w-5 h-5" />,
-        color: 'blue'
-      });
-    }
-
-    // Most appearances
-    const mostAppearances = [...allPlayers]
-      .map(p => ({
-        ...p,
-        appearances: p.monthlyData.find(m => m.month === 'overall')?.appearances || 0
-      }))
-      .sort((a, b) => b.appearances - a.appearances)[0];
-    
-    if (mostAppearances.appearances > 0) {
-      records.push({
-        title: 'Most Appearances',
-        subtitle: 'All-time record',
-        player: mostAppearances,
-        value: mostAppearances.appearances,
-        label: 'Games',
-        icon: <Award className="w-5 h-5" />,
-        color: 'green'
-      });
-    }
-
-    // Most clean sheets
-    const mostCleanSheets = [...allPlayers]
-      .filter(p => p.position === 'GK')
-      .map(p => ({
-        ...p,
-        clean_sheets: p.monthlyData.find(m => m.month === 'overall')?.clean_sheets || 0
-      }))
-      .sort((a, b) => b.clean_sheets - a.clean_sheets)[0];
-    
-    if (mostCleanSheets && mostCleanSheets.clean_sheets > 0) {
-      records.push({
-        title: 'Most Clean Sheets',
-        subtitle: 'Goalkeeper record',
-        player: mostCleanSheets,
-        value: mostCleanSheets.clean_sheets,
-        label: 'Sheets',
-        icon: <Shield className="w-5 h-5" />,
-        color: 'cyan'
-      });
-    }
-
-    // Most wins
-    const mostWins = [...allPlayers]
-      .map(p => ({
-        ...p,
-        wins: p.monthlyData.find(m => m.month === 'overall')?.wins || 0
-      }))
-      .sort((a, b) => b.wins - a.wins)[0];
-    
-    if (mostWins.wins > 0) {
-      records.push({
-        title: 'Most Wins',
-        subtitle: 'All-time record',
-        player: mostWins,
-        value: mostWins.wins,
-        label: 'Wins',
-        icon: <Trophy className="w-5 h-5" />,
-        color: 'emerald'
-      });
-    }
-
-    // Most wins in a month
-    let mostWinsInMonth = { player: null, wins: 0, month: '' };
-    allPlayers.forEach(player => {
-      player.monthlyData.forEach(month => {
-        if (month.month !== 'overall' && month.wins > mostWinsInMonth.wins) {
-          mostWinsInMonth = { player, wins: month.wins, month: month.month };
-        }
-      });
-    });
-    
-    if (mostWinsInMonth.player) {
-      records.push({
-        title: 'Most Wins in a Month',
-        subtitle: mostWinsInMonth.month.charAt(0).toUpperCase() + mostWinsInMonth.month.slice(1),
-        player: mostWinsInMonth.player,
-        value: mostWinsInMonth.wins,
-        label: 'Wins',
-        icon: <Crown className="w-5 h-5" />,
-        color: 'purple'
-      });
-    }
-
     // Most yellow cards
-    const mostYellows = [...allPlayers]
-      .map(p => ({
-        ...p,
-        yellow_cards: p.monthlyData.find(m => m.month === 'overall')?.yellow_cards || 0
-      }))
-      .sort((a, b) => b.yellow_cards - a.yellow_cards)[0];
+    const yellowHolders = findRecordHolders(
+      allPlayers,
+      p => p.monthlyData.find(m => m.month === 'overall')?.yellow_cards || 0
+    );
     
-    if (mostYellows.yellow_cards > 0) {
+    if (yellowHolders.length > 0) {
       records.push({
         title: 'Most Yellow Cards',
-        subtitle: 'Discipline record',
-        player: mostYellows,
-        value: mostYellows.yellow_cards,
-        label: 'Yellows',
-        icon: <AlertCircle className="w-5 h-5" />,
-        color: 'yellow'
+        subtitle: 'All-time',
+        holders: yellowHolders,
+        icon: <AlertCircle className="w-4 h-4" />,
       });
     }
 
     // Most yellows in a month
-    let mostYellowsInMonth = { player: null, yellows: 0, month: '' };
-    allPlayers.forEach(player => {
-      player.monthlyData.forEach(month => {
-        if (month.month !== 'overall' && month.yellow_cards > mostYellowsInMonth.yellows) {
-          mostYellowsInMonth = { player, yellows: month.yellow_cards, month: month.month };
-        }
-      });
-    });
-    
-    if (mostYellowsInMonth.player) {
+    const monthlyYellows = findMonthlyRecordHolders(month => month.yellow_cards);
+    if (monthlyYellows) {
       records.push({
         title: 'Most Yellows in a Month',
-        subtitle: mostYellowsInMonth.month.charAt(0).toUpperCase() + mostYellowsInMonth.month.slice(1),
-        player: mostYellowsInMonth.player,
-        value: mostYellowsInMonth.yellows,
-        label: 'Cards',
-        icon: <AlertCircle className="w-5 h-5" />,
-        color: 'orange'
+        subtitle: 'Monthly record',
+        holders: monthlyYellows.holders.map(h => ({
+          player: h.player,
+          value: monthlyYellows.value,
+          extra: h.month.charAt(0).toUpperCase() + h.month.slice(1)
+        })),
+        icon: <Calendar className="w-4 h-4" />,
       });
     }
 
-    // Most assists
-    const mostAssists = [...allPlayers]
-      .map(p => ({
-        ...p,
-        assists: p.monthlyData.find(m => m.month === 'overall')?.assists || 0
-      }))
-      .sort((a, b) => b.assists - a.assists)[0];
+    // Most red cards
+    const redHolders = findRecordHolders(
+      allPlayers,
+      p => p.monthlyData.find(m => m.month === 'overall')?.red_cards || 0
+    );
     
-    if (mostAssists.assists > 0) {
+    if (redHolders.length > 0) {
       records.push({
-        title: 'Most Assists',
-        subtitle: 'All-time record',
-        player: mostAssists,
-        value: mostAssists.assists,
-        label: 'Assists',
-        icon: <Zap className="w-5 h-5" />,
-        color: 'indigo'
-      });
-    }
-
-    // Most MOTM
-    const mostMOTM = [...allPlayers]
-      .map(p => ({
-        ...p,
-        motm: p.monthlyData.find(m => m.month === 'overall')?.motm || 0
-      }))
-      .sort((a, b) => b.motm - a.motm)[0];
-    
-    if (mostMOTM.motm > 0) {
-      records.push({
-        title: 'Most MOTM Awards',
-        subtitle: 'All-time record',
-        player: mostMOTM,
-        value: mostMOTM.motm,
-        label: 'Awards',
-        icon: <Star className="w-5 h-5" />,
-        color: 'pink'
+        title: 'Most Red Cards',
+        subtitle: 'All-time',
+        holders: redHolders,
+        icon: <AlertCircle className="w-4 h-4" />,
       });
     }
 
     return records;
   };
 
-  const milestones = getMilestoneAchievements();
-  const records = getRecordHolders();
+  // Get goal records
+  const getGoalRecords = () => {
+    const records = [];
 
-  const getColorClasses = (color) => {
-    const colors = {
-      amber: 'bg-amber-500 border-amber-400',
-      blue: 'bg-blue-500 border-blue-400',
-      green: 'bg-green-500 border-green-400',
-      cyan: 'bg-cyan-500 border-cyan-400',
-      emerald: 'bg-emerald-500 border-emerald-400',
-      purple: 'bg-purple-500 border-purple-400',
-      yellow: 'bg-yellow-500 border-yellow-400',
-      orange: 'bg-orange-500 border-orange-400',
-      indigo: 'bg-indigo-500 border-indigo-400',
-      pink: 'bg-pink-500 border-pink-400'
-    };
-    return colors[color] || colors.amber;
+    // Most goals overall
+    const goalHolders = findRecordHolders(
+      allPlayers,
+      p => p.monthlyData.find(m => m.month === 'overall')?.goals || 0
+    );
+    
+    if (goalHolders.length > 0) {
+      records.push({
+        title: 'Most Goals',
+        subtitle: 'All-time',
+        holders: goalHolders,
+        icon: <Target className="w-4 h-4" />,
+      });
+    }
+
+    // Most goals in a month
+    const monthlyGoals = findMonthlyRecordHolders(month => month.goals);
+    if (monthlyGoals) {
+      records.push({
+        title: 'Most Goals in a Month',
+        subtitle: 'Monthly record',
+        holders: monthlyGoals.holders.map(h => ({
+          player: h.player,
+          value: monthlyGoals.value,
+          extra: h.month.charAt(0).toUpperCase() + h.month.slice(1)
+        })),
+        icon: <Calendar className="w-4 h-4" />,
+      });
+    }
+
+    // Most slingers
+    const slingerHolders = findRecordHolders(
+      allPlayers,
+      p => p.monthlyData.find(m => m.month === 'overall')?.slingers || 0
+    );
+    
+    if (slingerHolders.length > 0) {
+      records.push({
+        title: 'Most Slingers',
+        subtitle: 'All-time',
+        holders: slingerHolders,
+        icon: <Zap className="w-4 h-4" />,
+      });
+    }
+
+    // Most hat-tricks
+    const hatrickHolders = findRecordHolders(
+      allPlayers,
+      p => p.monthlyData.find(m => m.month === 'overall')?.hatricks || 0
+    );
+    
+    if (hatrickHolders.length > 0) {
+      records.push({
+        title: 'Most Hat-tricks',
+        subtitle: 'All-time',
+        holders: hatrickHolders,
+        icon: <Crown className="w-4 h-4" />,
+      });
+    }
+
+    // Most penalties
+    const penaltyHolders = findRecordHolders(
+      allPlayers,
+      p => p.monthlyData.find(m => m.month === 'overall')?.penalties || 0
+    );
+    
+    if (penaltyHolders.length > 0) {
+      records.push({
+        title: 'Most Penalties',
+        subtitle: 'All-time',
+        holders: penaltyHolders,
+        icon: <Target className="w-4 h-4" />,
+      });
+    }
+
+    return records;
   };
+
+  // Get assist records
+  const getAssistRecords = () => {
+    const records = [];
+
+    // Most assists overall
+    const assistHolders = findRecordHolders(
+      allPlayers,
+      p => p.monthlyData.find(m => m.month === 'overall')?.assists || 0
+    );
+    
+    if (assistHolders.length > 0) {
+      records.push({
+        title: 'Most Assists',
+        subtitle: 'All-time',
+        holders: assistHolders,
+        icon: <Zap className="w-4 h-4" />,
+      });
+    }
+
+    // Most assists in a month
+    const monthlyAssists = findMonthlyRecordHolders(month => month.assists);
+    if (monthlyAssists) {
+      records.push({
+        title: 'Most Assists in a Month',
+        subtitle: 'Monthly record',
+        holders: monthlyAssists.holders.map(h => ({
+          player: h.player,
+          value: monthlyAssists.value,
+          extra: h.month.charAt(0).toUpperCase() + h.month.slice(1)
+        })),
+        icon: <Calendar className="w-4 h-4" />,
+      });
+    }
+
+    return records;
+  };
+
+  // Get POTM records
+  const getPOTMRecords = () => {
+    const records = [];
+
+    // Most MOTM
+    const motmHolders = findRecordHolders(
+      allPlayers,
+      p => p.monthlyData.find(m => m.month === 'overall')?.motm || 0
+    );
+    
+    if (motmHolders.length > 0) {
+      records.push({
+        title: 'Most MOTM Awards',
+        subtitle: 'All-time',
+        holders: motmHolders,
+        icon: <Star className="w-4 h-4" />,
+      });
+    }
+
+    return records;
+  };
+
+  // Get game statistics records
+  const getGameStatRecords = () => {
+    const records = [];
+
+    // Most appearances
+    const appearanceHolders = findRecordHolders(
+      allPlayers,
+      p => p.monthlyData.find(m => m.month === 'overall')?.appearances || 0
+    );
+    
+    if (appearanceHolders.length > 0) {
+      records.push({
+        title: 'Most Appearances',
+        subtitle: 'All-time',
+        holders: appearanceHolders,
+        icon: <Award className="w-4 h-4" />,
+      });
+    }
+
+    // Most appearances in a month
+    const monthlyAppearances = findMonthlyRecordHolders(month => month.appearances);
+    if (monthlyAppearances) {
+      records.push({
+        title: 'Most Games in a Month',
+        subtitle: 'Monthly record',
+        holders: monthlyAppearances.holders.map(h => ({
+          player: h.player,
+          value: monthlyAppearances.value,
+          extra: h.month.charAt(0).toUpperCase() + h.month.slice(1)
+        })),
+        icon: <Calendar className="w-4 h-4" />,
+      });
+    }
+
+    // Most wins
+    const winHolders = findRecordHolders(
+      allPlayers,
+      p => p.monthlyData.find(m => m.month === 'overall')?.wins || 0
+    );
+    
+    if (winHolders.length > 0) {
+      records.push({
+        title: 'Most Wins',
+        subtitle: 'All-time',
+        holders: winHolders,
+        icon: <Trophy className="w-4 h-4" />,
+      });
+    }
+
+    // Most wins in a month
+    const monthlyWins = findMonthlyRecordHolders(month => month.wins);
+    if (monthlyWins) {
+      records.push({
+        title: 'Most Wins in a Month',
+        subtitle: 'Monthly record',
+        holders: monthlyWins.holders.map(h => ({
+          player: h.player,
+          value: monthlyWins.value,
+          extra: h.month.charAt(0).toUpperCase() + h.month.slice(1)
+        })),
+        icon: <Crown className="w-4 h-4" />,
+      });
+    }
+
+    // Most clean sheets
+    const cleanSheetHolders = findRecordHolders(
+      allPlayers.filter(p => p.position === 'GK'),
+      p => p.monthlyData.find(m => m.month === 'overall')?.clean_sheets || 0
+    );
+    
+    if (cleanSheetHolders.length > 0) {
+      records.push({
+        title: 'Most Clean Sheets',
+        subtitle: 'Goalkeeper',
+        holders: cleanSheetHolders,
+        icon: <Shield className="w-4 h-4" />,
+      });
+    }
+
+    return records;
+  };
+
+  const disciplinaryRecords = getDisciplinaryRecords();
+  const goalRecords = getGoalRecords();
+  const assistRecords = getAssistRecords();
+  const potmRecords = getPOTMRecords();
+  const gameStatRecords = getGameStatRecords();
+
+  // Table section component
+  const Section = ({ title, icon, records, emptyMessage = "No records yet" }) => (
+    <div className="mb-8">
+      <div className="flex items-center gap-2 mb-3 px-4">
+        <div className="p-2 bg-zinc-900 rounded-lg">
+          {icon}
+        </div>
+        <h2 className="text-base font-black uppercase tracking-tighter italic">{title}</h2>
+      </div>
+      {records.length > 0 ? (
+        <div className="px-4">
+          <div className="bg-white border border-zinc-200 rounded-lg overflow-hidden">
+            <table className="w-full">
+              <thead>
+                <tr className="bg-zinc-50 border-b border-zinc-200">
+                  <th className="text-left px-4 py-3 text-[10px] font-black uppercase tracking-wider text-zinc-600">Record</th>
+                  <th className="text-left px-4 py-3 text-[10px] font-black uppercase tracking-wider text-zinc-600">Player(s)</th>
+                  <th className="text-right px-4 py-3 text-[10px] font-black uppercase tracking-wider text-zinc-600">Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                {records.map((record, index) => (
+                  <tr key={index} className="border-b border-zinc-100 last:border-b-0 transition-colors">
+                    <td className="px-4 py-3">
+                      <div className="flex items-center gap-2">
+                        <div className="text-zinc-600">
+                          {record.icon}
+                        </div>
+                        <div>
+                          <div className="text-sm font-bold text-zinc-900">{record.title}</div>
+                          <div className="text-[10px] text-zinc-500 uppercase tracking-wide font-semibold">{record.subtitle}</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td className="px-4 py-3">
+                      <div className="flex flex-col gap-2">
+                        {record.holders.map((holder, hIndex) => (
+                          <div key={hIndex} className="flex items-center gap-2">
+                            <div className="w-7 h-7 rounded-full bg-zinc-100 flex items-center justify-center text-xs font-bold text-zinc-700 flex-shrink-0">
+                              <img src={holder.player.images[0]} />
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <div className="text-sm font-bold text-zinc-900 truncate">{holder.player.name}</div>
+                              <div className="text-[10px] text-zinc-500 uppercase tracking-wide font-semibold">
+                                {holder.player.position}
+                                {holder.extra && ` • ${holder.extra}`}
+                              </div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </td>
+                    <td className="px-4 py-3 text-right">
+                      <div className="text-2xl font-black text-zinc-900">{record.holders[0].value}</div>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      ) : (
+        <div className="px-4">
+          <div className="bg-zinc-50 border border-zinc-200 rounded-lg p-8 text-center">
+            <p className="text-sm text-zinc-400 font-semibold">{emptyMessage}</p>
+          </div>
+        </div>
+      )}
+    </div>
+  );
 
   return (
     <div className="min-h-screen pb-20">
@@ -303,8 +411,41 @@ const Awards = () => {
         </div>
       </header>
 
-      <div className="px-4 py-3">
-      <h1 className="text-[10px] font-black uppercase tracking-tighter">Coming Soon...</h1>
+      <div className="py-6 max-w-7xl mx-auto">
+        <Section 
+          title="Goals" 
+          icon={<Target className="w-5 h-5 text-white" />}
+          records={goalRecords}
+          emptyMessage="No goals scored yet"
+        />
+
+        <Section 
+          title="Assists" 
+          icon={<Zap className="w-5 h-5 text-white" />}
+          records={assistRecords}
+          emptyMessage="No assists recorded yet"
+        />
+
+        <Section 
+          title="Player of the Match" 
+          icon={<Star className="w-5 h-5 text-white" />}
+          records={potmRecords}
+          emptyMessage="No MOTM awards yet"
+        />
+
+        <Section 
+          title="Game Statistics" 
+          icon={<Award className="w-5 h-5 text-white" />}
+          records={gameStatRecords}
+          emptyMessage="No games played yet"
+        />
+
+        <Section 
+          title="Disciplinary" 
+          icon={<AlertCircle className="w-5 h-5 text-white" />}
+          records={disciplinaryRecords}
+          emptyMessage="No disciplinary records yet"
+        />
       </div>
     </div>
   );

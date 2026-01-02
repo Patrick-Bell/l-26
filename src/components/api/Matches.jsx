@@ -20,6 +20,28 @@ export const allMatches = [
         motm: "Maignan",
         events: ["First game of the year", "Great play from Kane, hold up and passing", "Maignan makes several great saves in the game, one on Kane"]
       },
+      {
+        id: 2,
+        month: "january",
+        match_number: 2,
+        date: "02/01/2026",
+        time: "17:15",
+        referee: "Headband",
+        condition: "Clear",
+        team1_score: 0,
+        team2_score: 1,
+        team1: ["Bruney", "Walker", "Berbatov", "Griezmann", "Neymar", "Morata"],
+        team2: ["Mendy", "Lampard", "Ramos", "Jobe", "Saka", "Martinez"],
+        yellows: ["Morata", "Berbatov"],
+        reds: [],
+        goals: [
+          { p: "Jobe", a: "", special: "Penalty", side: "team2" },
+        ],
+        clean_sheets: ["Mendy", "Lampard", "Ramos", "Jobe", "Saka", "Martinez"],
+        penalties_missed: [],
+        motm: "Jobe",
+        events: []
+      },
 
       /*
     {

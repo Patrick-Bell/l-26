@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { 
   Calendar, Clock, Cloud, Sun, User, 
   ChevronRight, Goal, Users, Star, 
@@ -11,6 +11,17 @@ import { allMatches } from '../../api/Matches';
 const Matches = () => {
   const navigate = useNavigate();
   const [matchData, setMatchData] = useState(allMatches)
+  const [monthFilter, setMonthFilter] = useState('january');
+
+  const months = ['overall', 'january', 'february', 'march', 'arpil', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
+
+  const filteredMatches = useMemo(() => {
+    if (monthFilter === 'overall') return matchData;
+  
+    return matchData.filter(
+      match => match.month.toUpperCase() === monthFilter.toUpperCase()
+    );
+  }, [monthFilter, matchData]);
 
   return (
     <div className="min-h-screen pb-20">
@@ -24,12 +35,28 @@ const Matches = () => {
               <p className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest leading-none">Season 26</p>
             </div>
           </div>
+          <div className="flex gap-1.5 overflow-x-auto scrollbar-hide mt-4 md:mt-0 max-w-150 scrollbar-hide">
+              {months.map(month => (
+                <button
+                  onClick={() => setMonthFilter(month)}
+                  key={month}
+                  className={`px-3 py-1 rounded-md text-[10px] font-bold transition-all shrink-0 uppercase ${
+                    monthFilter === month 
+                    ? 'bg-zinc-950 text-white shadow-md' 
+                    : 'bg-zinc-100 text-zinc-500 hover:bg-zinc-200'
+                  }`}
+                >
+                  {month}
+                </button>
+              ))}
+            </div>
         </div>
       </header>
 
-      <main className="mx-auto py-8 space-y-4">
-        
-        {matchData.map((match) => (
+      <div className='mt-8 text-right px-4 text-xs text-gray-600 font-bold uppercase tracking-wide'>{filteredMatches.length} matches</div>
+
+      <main className="mx-auto py-8 space-y-4">        
+        {filteredMatches.map((match) => (
           <div key={match.id} className="bg-white rounded-[32px] border border-zinc-200 overflow-hidden transition-all">
             
             {/* MATCH TOP BAR (Meta Info) */}
