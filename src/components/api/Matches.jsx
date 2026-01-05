@@ -42,6 +42,27 @@ export const allMatches = [
         motm: "Jobe",
         events: []
       },
+      {
+        id: 3,
+        month: "january",
+        match_number: 3,
+        date: "05/01/2026",
+        time: "17:15",
+        referee: "Refil",
+        condition: "Clear",
+        team1_score: 0,
+        team2_score: 0,
+        team1: ["Courtois", "Sergio", "Yamal", "Olmo", "Berbatov", "Kane"],
+        team2: ["Bruney", "Russian Def", "Mbappe", "Bellingham", "Van Persie", "Benzema"],
+        yellows: [],
+        reds: [],
+        goals: [
+        ],
+        clean_sheets: ["Courtois", "Sergio", "Yamal", "Olmo", "Berbatov", "Kane", "Bruney", "Russian Def", "Mbappe", "Bellingham", "Van Persie", "Benzema"],
+        penalties_missed: [],
+        motm: "Olmo",
+        events: []
+      },
 
       /*
     {
