@@ -40,7 +40,7 @@ export const allMatches = [
         clean_sheets: ["Mendy", "Lampard", "Ramos", "Jobe", "Saka", "Martinez"],
         penalties_missed: [],
         motm: "Jobe",
-        events: []
+        events: ['Jobe wins the penalty by shooting and Berbatov blocks it with his hand']
       },
       {
         id: 3,
@@ -61,7 +61,7 @@ export const allMatches = [
         clean_sheets: ["Courtois", "Sergio", "Yamal", "Olmo", "Berbatov", "Kane", "Bruney", "Russian Def", "Mbappe", "Bellingham", "Van Persie", "Benzema"],
         penalties_missed: [],
         motm: "Olmo",
-        events: []
+        events: ['Olmo and Van Persie smash the post', 'Berbatov has played 3/3 games']
       },
 
       /*
