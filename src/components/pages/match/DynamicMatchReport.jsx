@@ -46,7 +46,11 @@ const DynamicMatchReport = () => {
         </div>
 
         {/* INFO STRIP */}
-        <div className="grid grid-cols-3 gap-2">
+        <div className="grid grid-cols-4 gap-2">
+        <div className="bg-white p-2.5 rounded-2xl border border-zinc-100 flex items-center gap-2 ">
+            <Calendar className="w-3 h-3 text-zinc-300" />
+            <span className="text-[8px] font-black uppercase">{match.match_number}</span>
+          </div>
           <div className="bg-white p-2.5 rounded-2xl border border-zinc-100 flex items-center gap-2 ">
             <Calendar className="w-3 h-3 text-zinc-300" />
             <span className="text-[8px] font-black uppercase">{match.date}</span>
