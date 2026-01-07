@@ -82,7 +82,7 @@ const MatchTable = ({ match }) => {
       <main className="mx-auto">
         <div className="bg-white rounded-md border border-zinc-200 overflow-hidden">
           <div className="overflow-x-auto scrollbar-hide">
-            <table className="w-full border-collapse min-w-[850px] text-center">
+            <table className="w-full border-collapse min-w-[600px] text-center">
               <thead>
                 <tr className="border-b border-zinc-100 bg-zinc-50">
                   <th className="px-4 py-4 text-[9px] font-black uppercase text-zinc-400 w-12">#</th>

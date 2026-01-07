@@ -4,9 +4,10 @@ import {
   Zap, Award, Target, Flame 
 } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, matchPath } from 'react-router-dom';
 import { allMatches } from '../../api/Matches';
 import MatchTable from './MatchTable';
+import MatchEvents from './MatchEvents';
 
 const DynamicMatchReport = () => {
   const { id } = useParams();
@@ -65,11 +66,13 @@ const DynamicMatchReport = () => {
             <TabsTrigger value="summary" className="flex-1 rounded-xl text-[9px] font-black uppercase">Summary</TabsTrigger>
             <TabsTrigger value="lineups" className="flex-1 rounded-xl text-[9px] font-black uppercase">Lineups</TabsTrigger>
             <TabsTrigger value="table" className="flex-1 rounded-xl text-[9px] font-black uppercase">Table</TabsTrigger>
+            <TabsTrigger value="events" className="flex-1 rounded-xl text-[9px] font-black uppercase">Events</TabsTrigger>
           </TabsList>
 
           {/* TAB: SUMMARY */}
           <TabsContent value="summary" className="space-y-3 outline-none pb-8">
             <div className="bg-white rounded-[28px] p-5 border border-zinc-100 relative overflow-hidden">
+            <p className='text-xs text-black mb-2 font-bold uppercase tracking-wide'>Timeline</p>
               <div className="absolute left-1/2 top-8 bottom-8 w-px bg-zinc-100 -translate-x-1/2" />
               <div className="space-y-6 relative">
                 {/* Render Goals from array */}
@@ -134,6 +137,10 @@ const DynamicMatchReport = () => {
           {/* TAB: TABLE */}
           <TabsContent value='table'>
           {match && <MatchTable match={match} />}
+          </TabsContent>
+
+          <TabsContent value='events'>
+              {match && <MatchEvents match={match}/>}
           </TabsContent>
 
 
