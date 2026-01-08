@@ -146,7 +146,7 @@ const Page = () => {
         </header>
 
 
-        <div className="flex-1 p-6 w-full">
+        <div className="p-6 w-full">
           <Routes>
               <Route path="/" element={<Dashboard />} />
               <Route path="/players" element={<PlayersPage />} />

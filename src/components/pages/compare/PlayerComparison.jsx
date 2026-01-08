@@ -12,6 +12,10 @@ const PlayerComparison = () => {
     return player.monthlyData.find(m => m.month === 'overall') || {};
   };
 
+  const getAwards = (player) => {
+    return player.previousSeason[0]?.awards.length || 0;
+  }
+
   const getWinRate = (stats) => {
     const total = stats.wins + stats.draws + stats.losses;
     return total > 0 ? ((stats.wins / total) * 100).toFixed(1) : '0.0';
@@ -78,6 +82,9 @@ const PlayerComparison = () => {
 
   const stats1 = player1 ? getOverallStats(player1) : null;
   const stats2 = player2 ? getOverallStats(player2) : null;
+
+  const awards1 = player1 ? getAwards(player1) : 0;
+  const awards2 = player2 ? getAwards(player2) : 0;
 
   return (
     <div className="min-h-screen pb-20">
@@ -311,6 +318,22 @@ const PlayerComparison = () => {
                     </div>
                   </div>
                 </div>
+
+                <div className="bg-white rounded-lg p-2 border border-zinc-100">
+                  <div className="grid grid-cols-3 items-center gap-2">
+                    <div className={`text-right text-base font-black italic tabular-nums ${compareValue(awards1, awards2)}`}>
+                      {awards1 || 0}
+                    </div>
+                    <div className="text-center">
+                      <div className="text-[8px] font-black uppercase tracking-widest text-zinc-400">Trophies</div>
+                    </div>
+                    <div className={`text-left text-base font-black italic tabular-nums ${compareValue(awards2, awards1)}`}>
+                      {awards2 || 0}
+                    </div>
+                  </div>
+                </div>
+
+
               </div>
             </div>
 
