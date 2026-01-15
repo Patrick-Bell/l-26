@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Trophy, Award, Target, Crown, Star, Medal, Zap, Shield, Calendar, AlertCircle, TrendingUp, Home, Plane } from 'lucide-react';
 import { allPlayers } from '../../api/Players';
 import { allMatches } from '../../api/Matches';
+import MatchAwards from './MatchAwards';
 
 const Awards = () => {
+
+  const [matches, setMatches] = useState(allMatches)
 
   // Helper function to find all record holders (handles ties)
   const findRecordHolders = (players, getValue) => {
@@ -95,6 +98,41 @@ const Awards = () => {
     return records;
   };
 
+  const getMotmRecords = () => {
+    const records = [];
+
+    // Most yellow cards
+    const motmHolders = findRecordHolders(
+      allPlayers,
+      p => p.monthlyData.find(m => m.month === 'overall')?.motm || 0
+    );
+    
+    if (motmHolders.length > 0) {
+      records.push({
+        title: 'Most MOTM',
+        subtitle: 'All-time',
+        holders: motmHolders,
+        icon: <AlertCircle className="w-4 h-4" />,
+      });
+    }
+
+    // Most yellows in a month
+    const monthlyMotm = findMonthlyRecordHolders(month => month.motm);
+    if (monthlyMotm) {
+      records.push({
+        title: 'Most MOTM in a Month',
+        subtitle: 'Monthly record',
+        holders: monthlyMotm.holders.map(h => ({
+          player: h.player,
+          value: monthlyMotm.value,
+          extra: h.month.charAt(0).toUpperCase() + h.month.slice(1)
+        })),
+        icon: <Calendar className="w-4 h-4" />,
+      });
+    }
+    return records;
+  };
+
   // Get goal records
   const getGoalRecords = () => {
     const records = [];
@@ -128,6 +166,16 @@ const Awards = () => {
         icon: <Calendar className="w-4 h-4" />,
       });
     }
+
+    records.push({
+      title: 'First Goal Scored',
+      subtitle: 'All-time',
+      holders: [{
+        player: allPlayers.find(p => p.name === 'Jobe'),
+        value: '02/01/2026',
+      }],
+      icon: <Plane className="w-4 h-4" />,
+    })
 
     // Most slingers
     const slingerHolders = findRecordHolders(
@@ -323,6 +371,7 @@ const Awards = () => {
   const assistRecords = getAssistRecords();
   const potmRecords = getPOTMRecords();
   const gameStatRecords = getGameStatRecords();
+  const motmRecords = getMotmRecords();
 
   // Table section component
   const Section = ({ title, icon, records, emptyMessage = "No records yet" }) => (
@@ -395,6 +444,7 @@ const Awards = () => {
     </div>
   );
 
+
   return (
     <div className="min-h-screen pb-20">
       <header className="bg-white border-b border-zinc-200 sticky top-0 z-40">
@@ -446,6 +496,16 @@ const Awards = () => {
           records={disciplinaryRecords}
           emptyMessage="No disciplinary records yet"
         />
+
+        <Section 
+        title={'MOTM'}
+        icon={<Home className="w-5 h-5 text-white" />}
+        records={motmRecords}
+        emptyMessage="No MOTM records yet"
+        />
+
+        <MatchAwards />
+
       </div>
     </div>
   );

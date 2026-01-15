@@ -38,9 +38,12 @@ const TeamGenerator = () => {
     setRevealedPositions(new Set());
     setTeams(null);
 
-   
-   // Shuffle players
-    const shuffled = [...allPlayers].sort(() => Math.random() - 0.5);
+
+    const excludedPlayers = []
+    
+    const shuffled = allPlayers
+    .filter(player => !excludedPlayers.includes(player.name)) // exclude by name
+    .sort(() => Math.random() - 0.5);
     
     const team1 = {};
     const team2 = {};
@@ -193,7 +196,7 @@ const TeamGenerator = () => {
         <div className="space-y-4">
           
           {/* Generate Teams Tab */}
-          <GenerateSection activeTab={activeTab} showTeams={showTeams} isGenerating={isGenerating} positions={positions} teams={teams} revealedPositions={revealedPositions}/>
+          <GenerateSection activeTab={activeTab} showTeams={showTeams} isGenerating={isGenerating} positions={positions} teams={teams} revealedPositions={revealedPositions} matches={matches}/>
 
           {/* Match Stats Tab */}
          <StatsSection activeTab={activeTab} teams={teams} matches={matches} getMatchStats={getMatchStats} getPredictedWinner={getPredictedWinner} />

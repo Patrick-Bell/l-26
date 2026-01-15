@@ -1,13 +1,25 @@
+import { useState } from "react"
+import { allPlayers } from "../../api/Players"
 import PlayerCard from "./PlayerCard"
-import { Shuffle, Users } from "lucide-react"
+import { Hammer, Shuffle, Users } from "lucide-react"
+import PlayerPlayModal from "../dialog/PlayerPlayModal"
 
-const GenerateSection = ({ activeTab, showTeams, isGenerating, positions, teams, revealedPositions }) => {
+const GenerateSection = ({ activeTab, showTeams, isGenerating, positions, teams, revealedPositions, matches }) => {
+
+  const [showModal, setShowModal] = useState(false)
+  const [players, setSelectedPlayers] = useState([])
+
+  const revealPlayers = (pos) => {
+    const filteredPlayers = allPlayers.filter((player) => player.position.includes(pos.key))
+    setSelectedPlayers(filteredPlayers)
+  }
 
     return (
         <>
         {activeTab === 'generate' && (
             <>
               {!showTeams && !isGenerating && (
+                <>
                 <div className="bg-white rounded-2xl p-8 border border-zinc-200 text-center">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-zinc-100 rounded-2xl mb-4">
                     <Shuffle className="w-8 h-8 text-zinc-600" />
@@ -17,19 +29,21 @@ const GenerateSection = ({ activeTab, showTeams, isGenerating, positions, teams,
                     Click the button to generate the teams.
                   </p>
                   
-                  {/* Position legend */}
-                  <div className="pt-6 border-t border-zinc-100">
-                    <p className="text-[8px] font-black text-zinc-400 uppercase tracking-widest mb-3">Positions</p>
-                    <div className="flex items-center justify-center gap-2 flex-wrap">
-                      {positions.map(pos => (
-                        <div key={pos.key} className="flex items-center gap-1.5 bg-zinc-50 px-3 py-2 rounded-lg border border-zinc-100">
-                          <pos.icon className="w-3 h-3 text-zinc-400" />
-                          <span className="text-[9px] font-bold text-zinc-600 uppercase">{pos.label}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
+                  <PlayerPlayModal players={players} positions={positions} revealPlayers={revealPlayers} />
+
                 </div>
+
+                <div className="bg-white rounded-2xl p-6 border border-zinc-200">
+                <h3 className="text-sm font-black uppercase mb-6 flex items-center gap-2">
+                  <Hammer className="w-4 h-4" />
+                  Referee
+                </h3>
+                <span className="text-xs text-gray-600 font-bold uppercase tracking-wide">
+                  {matches.length % 2 === 0 ? 'The referee for this game is Refil.' : 'The referee for this game is Headband.'}
+                </span>
+              </div>
+              
+                </>
               )}
 
               {showTeams && teams && (

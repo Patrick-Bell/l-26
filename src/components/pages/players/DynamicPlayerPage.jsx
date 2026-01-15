@@ -11,6 +11,7 @@ import MiniStat from './MiniStat';
 import DisciplineSection from './DisciplineSection';
 import FormSection from './FormSection';
 import ComparisonsSection from './ComparisonSection';
+import PlayerMatches from './PlayerMatches';
 
 const DynamicPlayersPage = () => {
   const { id } = useParams();
@@ -54,6 +55,11 @@ const DynamicPlayersPage = () => {
   };
 
   const status = getStatus();
+
+  const getTablePosition = (player) => {
+    const sortedPlayers = [...allPlayers].sort((a, b) => b.monthlyData[0].points - a.monthlyData[0].points);
+    return sortedPlayers.findIndex(p => p.id === player.id) + 1;
+  }
 
 
 // inside DynamicPlayersPage.js
@@ -160,8 +166,12 @@ const comparisonData = useMemo(() => {
               {/* Quick Stats */}
               <div className="flex items-center gap-2 flex-wrap">
                 <div className="flex items-center gap-1 bg-white/10 px-2 py-1 rounded-lg backdrop-blur-sm">
-                  <span className="text-[8px] font-bold text-zinc-400 uppercase">Form</span>
+                  <span className="text-[8px] font-bold text-zinc-400 uppercase">PTS</span>
                   <span className="text-xs font-black text-emerald-400">{analytics.pts} pts</span>
+                </div>
+                <div className="flex items-center gap-1 bg-white/10 px-2 py-1 rounded-lg backdrop-blur-sm">
+                  <span className="text-[8px] font-bold text-zinc-400 uppercase">POS</span>
+                  <span className="text-xs font-black text-white">{getTablePosition(player)}</span>
                 </div>
               </div>
             </div>
@@ -228,6 +238,7 @@ const comparisonData = useMemo(() => {
             <TabsTrigger value="previous" className="rounded-xl px-3 font-bold text-[9px] uppercase flex-1">History</TabsTrigger>
             <TabsTrigger value="awards" className="rounded-xl px-3 font-bold text-[9px] uppercase flex-1">Awards</TabsTrigger>
             <TabsTrigger value="comparison" className="rounded-xl px-3 font-bold text-[9px] uppercase flex-1">Compare</TabsTrigger>
+            <TabsTrigger value="games" className="rounded-xl px-3 font-bold text-[9px] uppercase flex-1">Matches</TabsTrigger>
           </TabsList>
 
           {/* Monthly Breakdown */}
@@ -309,6 +320,10 @@ const comparisonData = useMemo(() => {
 
           <TabsContent value='comparison' className='space-y-3'>
             <ComparisonsSection comparisonData={comparisonData} player={player} />
+          </TabsContent>
+
+          <TabsContent value='games' className={'space-y-3'}>
+            <PlayerMatches player={player} />
           </TabsContent>
 
         </Tabs>
