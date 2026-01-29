@@ -64,7 +64,7 @@ const PlayerPlayModal = ({ positions, revealPlayers, players }) => {
         <table className="w-full border-collapse min-w-[200px] text-center">
               <thead>
                 <tr className="border-b border-zinc-100 bg-zinc-50 sticky top-0 z-40">
-                  <th className="px-4 py-4 text-[9px] font-black uppercase text-zinc-400 w-10 text-left">Name</th>
+                  <th className="px-4 py-4 text-[9px] font-black uppercase text-zinc-400 w-10 text-left">Player</th>
                   <th className="px-4 py-4 text-[9px] font-black uppercase text-zinc-400 text-right sticky left-0 bg-zinc-50 z-30">Appearances | Play %</th>
                 </tr>
               </thead>
