@@ -51,7 +51,7 @@ const POTM = () => {
               {/* Player Info */}
               <div className="p-4">
                 <div className="flex items-start gap-3 mb-4">
-                  <div className="relative shrink-0">
+                  <div onClick={() => window.location.href = `/players/${winner.playerId}`} className="cursor-pointer bg-red-200 relative shrink-0">
                     <img
                       src={winner.player.image}
                       className="w-20 h-24 object-cover rounded-lg border-2 border-amber-400"
