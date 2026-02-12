@@ -11,7 +11,7 @@ import { allMatches } from '../../api/Matches';
 const Matches = () => {
   const navigate = useNavigate();
   const [matchData, setMatchData] = useState(allMatches)
-  const [monthFilter, setMonthFilter] = useState('january');
+  const [monthFilter, setMonthFilter] = useState('february');
 
   const months = ['overall', 'january', 'february', 'march', 'arpil', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
 
