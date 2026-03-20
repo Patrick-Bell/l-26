@@ -256,7 +256,7 @@ export const allMatches = [
         reds: [],
         goals: [
           { p: "Tevez", a: "Haaland", special: "slinger", side: "team1" },
-          { p: "Mbappe", a: "", special: "penalty", side: "team2" },
+          { p: "Mbappe", a: "", special: "Penalty", side: "team2" },
           { p: "Musiala", a: "Haaland", special: "", side: "team1" },
         ],
         clean_sheets: [],
@@ -375,6 +375,52 @@ export const allMatches = [
         penalties_missed: [],
         motm: "Kane",
         events: ['Kane first goal was a diving header right in the corner' , 'Kane second goal was an interception from Pedri on Silva - brilliant tackle, trapped under his head, and then layed it off to Kane who smashed it across goal, hit the post and ended up in the other corners slinger']
+      },
+      {
+        id: 18,
+        month: "march",
+        match_number: 18,
+        date: "18/03/2026",
+        time: "17:15",
+        referee: "Refil",
+        condition: "Clear",
+        team1_score: 0,
+        team2_score: 2,
+        team1: ['Van Der Sar', 'Caveman', 'Silva', 'Barella', 'Mbappe', 'Ronaldo'],
+        team2: ['Bruney', 'Black Hair', 'Raul', 'Jobe', 'Bowen', 'Lewandowski'],
+        yellows: [],
+        reds: [],
+        goals: [
+          { p: "Jobe", a: "Bowen", special: "", side: "team2" },
+          { p: "Raul", a: "Black Hair", special: "", side: "team2" }
+        ],
+        clean_sheets: ['Bruney', 'Black Hair', 'Raul', 'Jobe', 'Bowen', 'Lewandowski'],
+        penalties_missed: [],
+        motm: "Black Hair",
+        events: ['Jobe great skill on Barella and finesse top corner post and in']
+      },
+      {
+        id: 19,
+        month: "march",
+        match_number: 19,
+        date: "19/03/2026",
+        time: "17:15",
+        referee: "Refil",
+        condition: "Clear",
+        team1_score: 1,
+        team2_score: 1,
+        team1: ['Courtois', 'Black Hair', 'Torres', 'Modric', 'Pele', 'Kane'],
+        team2: ['Cech', 'Puyol', 'Silva', 'Bellingham', 'Messi', 'Ronaldo'],
+        yellows: ['Silva', 'Kane'],
+        reds: ['Silva'],
+        goals: [
+          { p: "Ronaldo", a: "", special: "Penalty", side: "team2" },
+          { p: "Pele", a: "Modric", special: "", side: "team1" }
+        ],
+        clean_sheets: [],
+        penalties_missed: [],
+        motm: "Ronaldo",
+        events: ['Ronaldo great turn on Kane and won the penalty']
       },
 
 
