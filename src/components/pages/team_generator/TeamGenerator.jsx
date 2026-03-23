@@ -39,7 +39,7 @@ const TeamGenerator = () => {
     setTeams(null);
 
 
-    const excludedPlayers = []
+    const excludedPlayers = ['Raul']
     
     const shuffled = allPlayers
     .filter(player => !excludedPlayers.includes(player.name)) // exclude by name
