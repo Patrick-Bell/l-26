@@ -342,13 +342,13 @@ export const allPlayers = [
         "isInjured": false,
         "date_return": ''
       },
-      "form": ['L', 'W', 'D', 'L', 'W', 'D'],
+      "form": ['L', 'W', 'D', 'L', 'W', 'D', 'D'],
       "potm": false,
       "monthlyData": [
         { "month": "overall", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
         { "month": "january", "appearances": 0, "wins": 1, "draws": 1, "losses": 1, "points": 0, "goals": 1, "assists": 1, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 1, "motm": 0 },
         { "month": "february", "appearances": 0, "wins": 0, "draws": 0, "losses": 1, "points": 0, "goals": 1, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
-        { "month": "march", "appearances": 0, "wins": 1, "draws": 1, "losses": 0, "points": 0, "goals": 0, "assists": 1, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 2, "motm": 0 },
+        { "month": "march", "appearances": 0, "wins": 1, "draws": 2, "losses": 0, "points": 0, "goals": 0, "assists": 1, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 3, "motm": 0 },
         { "month": "april", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
         { "month": "may", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
         { "month": "june", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
@@ -617,13 +617,13 @@ export const allPlayers = [
         "isInjured": false,
         "date_return": ''
       },
-      "form": ["D", 'W'],
+      "form": ["D", 'W', 'D'],
       "potm": false,
      "monthlyData": [
           { "month": "overall", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
           { "month": "january", "appearances": 0, "wins": 0, "draws": 1, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
           { "month": "february", "appearances": 0, "wins": 1, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
-          { "month": "march", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
+          { "month": "march", "appearances": 0, "wins": 0, "draws": 1, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 1, "motm": 1 },
           { "month": "april", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
           { "month": "may", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
           { "month": "june", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
@@ -1414,13 +1414,13 @@ export const allPlayers = [
         "isInjured": false,
         "date_return": ''
       },
-      "form": ['L', 'D', 'D'],
+      "form": ['L', 'D', 'D', 'D'],
       "potm": false,
       "monthlyData": [
         { "month": "overall", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
         { "month": "january", "appearances": 0, "wins": 0, "draws": 0, "losses": 1, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
         { "month": "february", "appearances": 0, "wins": 0, "draws": 2, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 1, "motm": 0 },
-        { "month": "march", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
+        { "month": "march", "appearances": 0, "wins": 0, "draws": 1, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 1, "red_cards": 0, "clean_sheets": 1, "motm": 0 },
         { "month": "april", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
         { "month": "may", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
         { "month": "june", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
@@ -1901,13 +1901,13 @@ export const allPlayers = [
         "isInjured": false,
         "date_return": ''
       },
-      "form": ["D", 'D', 'L'],
+      "form": ["D", 'D', 'L', 'D'],
       "potm": false,
       "monthlyData": [
         { "month": "overall", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
         { "month": "january", "appearances": 0, "wins": 0, "draws": 2, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 2, "motm": 0 },
         { "month": "february", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
-        { "month": "march", "appearances": 0, "wins": 0, "draws": 0, "losses": 1, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
+        { "month": "march", "appearances": 0, "wins": 0, "draws": 1, "losses": 1, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 1, "motm": 0 },
         { "month": "april", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
         { "month": "may", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
         { "month": "june", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
@@ -2214,13 +2214,13 @@ export const allPlayers = [
         "isInjured": false,
         "date_return": ''
       },
-      "form": ["D", 'W', 'D'],
+      "form": ["D", 'W', 'D', 'D'],
       "potm": false,
       "monthlyData": [
         { "month": "overall", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
         { "month": "january", "appearances": 0, "wins": 1, "draws": 1, "losses": 0, "points": 0, "goals": 1, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 2, "motm": 0 },
         { "month": "february", "appearances": 0, "wins": 0, "draws": 1, "losses": 0, "points": 0, "goals": 1, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 1, "penalties": 0, "hatricks": 0, "yellow_cards": 1, "red_cards": 0, "clean_sheets": 0, "motm": 1 },
-        { "month": "march", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
+        { "month": "march", "appearances": 0, "wins": 0, "draws": 1, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 1, "motm": 0 },
         { "month": "april", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
         { "month": "may", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
         { "month": "june", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
@@ -2485,13 +2485,13 @@ export const allPlayers = [
         "isInjured": false,
         "date_return": ''
       },
-      "form": ['W', 'W'],
+      "form": ['W', 'W', 'D'],
       "potm": false,
       "monthlyData": [
         { "month": "overall", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
         { "month": "january", "appearances": 0, "wins": 2, "draws": 0, "losses": 0, "points": 0, "goals": 1, "assists": 1, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 2, "motm": 1 },
         { "month": "february", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
-        { "month": "march", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
+        { "month": "march", "appearances": 0, "wins": 0, "draws": 1, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 1, "motm": 0 },
         { "month": "april", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
         { "month": "may", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
         { "month": "june", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
@@ -2530,13 +2530,13 @@ export const allPlayers = [
         "isInjured": false,
         "date_return": ''
       },
-      "form": ['D', 'L', 'L', 'D', 'W'],
+      "form": ['D', 'L', 'L', 'D', 'W', 'D'],
       "potm": false,
       "monthlyData": [
         { "month": "overall", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
         { "month": "january", "appearances": 0, "wins": 0, "draws": 1, "losses": 1, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 1, "motm": 0 },
         { "month": "february", "appearances": 0, "wins": 0, "draws": 1, "losses": 1, "points": 0, "goals": 0, "assists": 1, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
-        { "month": "march", "appearances": 0, "wins": 1, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 1, "motm": 0 },
+        { "month": "march", "appearances": 0, "wins": 1, "draws": 1, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 2, "motm": 0 },
         { "month": "april", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
         { "month": "may", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
         { "month": "june", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
@@ -2619,13 +2619,13 @@ export const allPlayers = [
         "isInjured": false,
         "date_return": ''
       },
-      "form": ['W'],
+      "form": ['W', 'D'],
       "potm": false,
       "monthlyData": [
         { "month": "overall", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
         { "month": "january", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
         { "month": "february", "appearances": 0, "wins": 1, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 1, "motm": 0 },
-        { "month": "march", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
+        { "month": "march", "appearances": 0, "wins": 0, "draws": 1, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 1, "motm": 0 },
         { "month": "april", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
         { "month": "may", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
         { "month": "june", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
@@ -2965,7 +2965,7 @@ export const allPlayers = [
       "suspended": {
         "isYellowSuspended": false,
         "yellowGamesSuspended": 0,
-        "isRedSuspended": true,
+        "isRedSuspended": false,
         "redGamesSuspended": 0
       },
       "banned": {
@@ -2976,13 +2976,13 @@ export const allPlayers = [
         "isInjured": false,
         "date_return": ''
       },
-      "form": ['L', 'D', 'D', 'L', 'L', 'D'],
+      "form": ['L', 'D', 'D', 'L', 'L', 'D', 'D'],
       "potm": false,
       "monthlyData": [
         { "month": "overall", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
         { "month": "january", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
         { "month": "february", "appearances": 0, "wins": 0, "draws": 1, "losses": 1, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
-        { "month": "march", "appearances": 0, "wins": 0, "draws": 2, "losses": 2, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 1, "red_cards": 1, "clean_sheets": 1, "motm": 0 },
+        { "month": "march", "appearances": 0, "wins": 0, "draws": 3, "losses": 2, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 1, "red_cards": 1, "clean_sheets": 2, "motm": 0 },
         { "month": "april", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
         { "month": "may", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
         { "month": "june", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
@@ -3020,13 +3020,13 @@ export const allPlayers = [
         "isInjured": false,
         "date_return": ''
       },
-      "form": ['W', 'D', 'W', 'D', 'W', 'L', 'D'],
+      "form": ['W', 'D', 'W', 'D', 'W', 'L', 'D', 'D'],
       "potm": false,
      "monthlyData": [
         { "month": "overall", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
         { "month": "january", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
         { "month": "february", "appearances": 0, "wins": 2, "draws": 1, "losses": 0, "points": 0, "goals": 1, "assists": 1, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 1, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
-        { "month": "march", "appearances": 0, "wins": 1, "draws": 2, "losses": 1, "points": 0, "goals": 0, "assists": 1, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 3, "motm": 0 },
+        { "month": "march", "appearances": 0, "wins": 1, "draws": 3, "losses": 1, "points": 0, "goals": 0, "assists": 1, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 4, "motm": 0 },
         { "month": "april", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
         { "month": "may", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
         { "month": "june", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
@@ -3063,13 +3063,13 @@ export const allPlayers = [
         "isInjured": false,
         "date_return": ''
       },
-      "form": ['D', 'W', 'W', 'D', 'W', 'D', 'D', 'L', 'L', 'D'],
+      "form": ['D', 'W', 'W', 'D', 'W', 'D', 'D', 'L', 'L', 'D', 'D'],
       "potm": false,
      "monthlyData": [
         { "month": "overall", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
         { "month": "january", "appearances": 0, "wins": 1, "draws": 1, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 2, "motm": 0 },
         { "month": "february", "appearances": 0, "wins": 2, "draws": 1, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 1, "motm": 0 },
-        { "month": "march", "appearances": 0, "wins": 0, "draws": 3, "losses": 2, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 3, "motm": 0 },
+        { "month": "march", "appearances": 0, "wins": 0, "draws": 4, "losses": 2, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 4, "motm": 0 },
         { "month": "april", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
         { "month": "may", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
         { "month": "june", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
@@ -3106,13 +3106,13 @@ export const allPlayers = [
         "isInjured": false,
         "date_return": ''
       },
-      "form": ['L', 'D', 'D', 'L', 'W', 'D', 'D'],
+      "form": ['L', 'D', 'D', 'L', 'W', 'D', 'D', 'D'],
       "potm": false,
       "monthlyData": [
         { "month": "overall", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
         { "month": "january", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
         { "month": "february", "appearances": 0, "wins": 0, "draws": 0, "losses": 1, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
-        { "month": "march", "appearances": 0, "wins": 1, "draws": 4, "losses": 1, "points": 0, "goals": 0, "assists": 1, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 4, "motm": 1 },
+        { "month": "march", "appearances": 0, "wins": 1, "draws": 5, "losses": 1, "points": 0, "goals": 0, "assists": 1, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 5, "motm": 1 },
         { "month": "april", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
         { "month": "may", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
         { "month": "june", "appearances": 0, "wins": 0, "draws": 0, "losses": 0, "points": 0, "goals": 0, "assists": 0, "win_percentage": 0, "unbeaten_percentage": 0, "own_goals": 0, "slingers": 0, "penalties": 0, "hatricks": 0, "yellow_cards": 0, "red_cards": 0, "clean_sheets": 0, "motm": 0 },
