@@ -39,7 +39,7 @@ const TeamGenerator = () => {
     setTeams(null);
 
 
-    const excludedPlayers = ['Raul', 'Tevez', 'Silva', 'Van Persie', 'Messi', 'Neymar', 'Vinicius', 'Mbappe']
+    const excludedPlayers = []
     
     const shuffled = allPlayers
     .filter(player => !excludedPlayers.includes(player.name)) // exclude by name
